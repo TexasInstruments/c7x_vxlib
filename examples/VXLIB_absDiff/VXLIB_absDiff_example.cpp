@@ -1,0 +1,160 @@
+// Copyright (C) 2026 Texas Instruments Incorporated
+//
+// SPDX-License-Identifier: Apache-2.0
+
+#include "VXLIB_bufParams.h"
+#include "VXLIB_types.h"
+#include "vxlib.h"
+#include <cstdio>
+#include <stdint.h>
+
+#define height (3)
+#define width (3)
+
+/******************************************************************************/
+/*                                                                            */
+/* main                                                                       */
+/*                                                                            */
+/******************************************************************************/
+
+int main(void)
+{
+
+   // clang-format off
+
+  // Setup input and output buffers for single- and double-precision datatypes
+   uint8_t in0[] = {100, 50, 0,
+		            255, 25, 40,
+                    65, 80, 120};
+
+   uint8_t in1[] = {100, 75, 5,
+		            55, 15, 60,
+		            40, 100, 10};
+   
+   uint8_t out[] = {0, 0, 0,
+		            0, 0, 0,
+		            0, 0, 0};
+
+   // clang-format on
+
+   // handles and struct for call to kernel
+   VXLIB_STATUS           status;
+   VXLIB_absDiff_InitArgs kerInitArgs;
+   int32_t                handleSize = VXLIB_absDiff_getHandleSize(&kerInitArgs);
+   VXLIB_kernelHandle     handle     = malloc(handleSize);
+
+   VXLIB_bufParams2D_t bufParamsIn0, bufParamsIn1, bufParamsOut;
+
+   // fill in input and output buffer parameters
+   bufParamsIn0.data_type = VXLIB_UINT8;
+   bufParamsIn0.dim_x     = width;
+   bufParamsIn0.dim_y     = height;
+   bufParamsIn0.stride_y  = width * sizeof(uint8_t);
+
+   bufParamsIn1.data_type = VXLIB_UINT8;
+   bufParamsIn1.dim_x     = width;
+   bufParamsIn1.dim_y     = height;
+   bufParamsIn1.stride_y  = width * sizeof(uint8_t);
+
+   bufParamsOut.data_type = VXLIB_UINT8;
+   bufParamsOut.dim_x     = width;
+   bufParamsOut.dim_y     = height;
+   bufParamsOut.stride_y  = width * sizeof(uint8_t);
+
+   kerInitArgs.funcStyle = VXLIB_FUNCTION_OPTIMIZED;
+
+   status = VXLIB_SUCCESS;
+
+   // init checkparams
+   if (status == VXLIB_SUCCESS)
+      status = VXLIB_absDiff_init_checkParams(handle, &bufParamsIn0, &bufParamsIn1, &bufParamsOut, &kerInitArgs);
+
+   // init
+   if (status == VXLIB_SUCCESS)
+      status = VXLIB_absDiff_init(handle, &bufParamsIn0, &bufParamsIn1, &bufParamsOut, &kerInitArgs);
+
+   // exec checkparams
+   if (status == VXLIB_SUCCESS)
+      VXLIB_absDiff_exec_checkParams(handle, in0, in1, out);
+
+   // exec
+   if (status == VXLIB_SUCCESS)
+      status = VXLIB_absDiff_exec(handle, in0, in1, out);
+
+   printf("UINT8 DATA");
+   // print results
+   for (size_t i = 0; i < height; i++) {
+      printf("\n\n");
+      for (size_t j = 0; j < width; j++) {
+         printf("%d, ", out[i * width + j]);
+      }
+   }
+   printf("\n\n");
+
+   // clang-format off
+
+  // Setup input and output buffers for single- and double-precision datatypes
+   int16_t in0_16[] = {32767, 10000, 5000,
+		            20000, 25000, 400,
+                    6500, 800, 1200};
+
+   int16_t in1_16[] = {-32767, -7500, 500,
+		            -5500, 150, 600,
+		            400, 100, -10};
+   
+   int16_t out_16[] = {0, 0, 0,
+		            0, 0, 0,
+		            0, 0, 0};
+
+   // clang-format on
+
+   // fill in input and output buffer parameters
+   bufParamsIn0.data_type = VXLIB_INT16;
+   bufParamsIn0.dim_x     = width;
+   bufParamsIn0.dim_y     = height;
+   bufParamsIn0.stride_y  = width * sizeof(int16_t);
+
+   bufParamsIn1.data_type = VXLIB_INT16;
+   bufParamsIn1.dim_x     = width;
+   bufParamsIn1.dim_y     = height;
+   bufParamsIn1.stride_y  = width * sizeof(int16_t);
+
+   bufParamsOut.data_type = VXLIB_INT16;
+   bufParamsOut.dim_x     = width;
+   bufParamsOut.dim_y     = height;
+   bufParamsOut.stride_y  = width * sizeof(int16_t);
+
+   kerInitArgs.funcStyle = VXLIB_FUNCTION_OPTIMIZED;
+
+   status = VXLIB_SUCCESS;
+
+   // init checkparams
+   if (status == VXLIB_SUCCESS)
+      status = VXLIB_absDiff_init_checkParams(handle, &bufParamsIn0, &bufParamsIn1, &bufParamsOut, &kerInitArgs);
+
+   // init
+   if (status == VXLIB_SUCCESS)
+      status = VXLIB_absDiff_init(handle, &bufParamsIn0, &bufParamsIn1, &bufParamsOut, &kerInitArgs);
+
+   // exec checkparams
+   if (status == VXLIB_SUCCESS)
+      VXLIB_absDiff_exec_checkParams(handle, in0_16, in1_16, out_16);
+
+   // exec
+   if (status == VXLIB_SUCCESS)
+      status = VXLIB_absDiff_exec(handle, in0_16, in1_16, out_16);
+
+   printf("INT16 DATA");
+   // print results
+   for (size_t i = 0; i < height; i++) {
+      printf("\n\n");
+      for (size_t j = 0; j < width; j++) {
+         printf("%d, ", out_16[i * width + j]);
+      }
+   }
+   printf("\n\n");
+
+   free(handle);
+
+   return 0;
+}

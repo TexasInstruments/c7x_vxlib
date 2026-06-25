@@ -1,0 +1,1927 @@
+
+##############################################################
+
+ Generating test case headers for VXLIB_addWeight
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_addWeight ~/vxlib/cmake
+~/vxlib/cmake
+
+Traceback (most recent call last):
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_addWeight/gen_data.py", line 245, in <module>
+    gen_test_case(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_addWeight/gen_data.py", line 212, in gen_test_case
+    [minY, maxY, alphaList[idx]] = gen_test_case_header_file(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_addWeight/gen_data.py", line 185, in gen_test_case_header_file
+    in0[in0 == in1] = (in0[in0 == in1] - 1) % 256
+OverflowError: Python integer 256 out of bounds for uint8
+
+##############################################################
+
+ Generating test case headers for VXLIB_accumulateWeightImage
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_accumulateWeightImage ~/vxlib/cmake
+~/vxlib/cmake
+
+Traceback (most recent call last):
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_accumulateWeightImage/gen_data.py", line 238, in <module>
+    gen_test_case(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_accumulateWeightImage/gen_data.py", line 205, in gen_test_case
+    [minY, maxY, alphaList[idx]] = gen_test_case_header_file(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_accumulateWeightImage/gen_data.py", line 178, in gen_test_case_header_file
+    in0[in0 == in1] = (in0[in0 == in1] - 1) % 256
+OverflowError: Python integer 256 out of bounds for uint8
+
+##############################################################
+
+ Generating test case headers for VXLIB_normL2
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_normL2 ~/vxlib/cmake
+~/vxlib/cmake
+
+/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_normL2/gen_data.py:196: RuntimeWarning: invalid value encountered in sqrt
+  sqrRoot = np.sqrt(sqrin0 + sqrin1)
+Traceback (most recent call last):
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_normL2/gen_data.py", line 249, in <module>
+    gen_test_case(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_normL2/gen_data.py", line 218, in gen_test_case
+    [minY, maxY] = gen_test_case_header_file(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_normL2/gen_data.py", line 198, in gen_test_case_header_file
+    sqrRootRound = np.array(list(map(lambda x: [ (y + 0.5) if (int(y) % 2  == 1) and (y-int(y) == 0.5) else y+0.5  for y in x], sqrRoot)))
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_normL2/gen_data.py", line 198, in <lambda>
+    sqrRootRound = np.array(list(map(lambda x: [ (y + 0.5) if (int(y) % 2  == 1) and (y-int(y) == 0.5) else y+0.5  for y in x], sqrRoot)))
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_normL2/gen_data.py", line 198, in <listcomp>
+    sqrRootRound = np.array(list(map(lambda x: [ (y + 0.5) if (int(y) % 2  == 1) and (y-int(y) == 0.5) else y+0.5  for y in x], sqrRoot)))
+ValueError: cannot convert float NaN to integer
+
+##############################################################
+
+ Generating test case headers for VXLIB_histogram
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_histogram ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 16
+Test case generation completed for test ID 2 w/ min: 0 and max 31
+~/vxlib/cmake
+
+/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_histogram/gen_data.py:183: RuntimeWarning: overflow encountered in scalar multiply
+  index = ((pixel - offset) * numBins // rangeHist).astype(np.uint32)
+/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_histogram/gen_data.py:183: RuntimeWarning: overflow encountered in scalar multiply
+  index = ((pixel - offset) * numBins // rangeHist).astype(np.uint32)
+/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_histogram/gen_data.py:183: RuntimeWarning: overflow encountered in scalar multiply
+  index = ((pixel - offset) * numBins // rangeHist).astype(np.uint32)
+Traceback (most recent call last):
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_histogram/gen_data.py", line 234, in <module>
+    gen_test_case(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_histogram/gen_data.py", line 203, in gen_test_case
+    [minY, maxY] = gen_test_case_header_file(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_histogram/gen_data.py", line 183, in gen_test_case_header_file
+    index = ((pixel - offset) * numBins // rangeHist).astype(np.uint32)
+OverflowError: Python integer 256 out of bounds for uint8
+
+##############################################################
+
+ Generating test case headers for VXLIB_minMaxLoc
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_minMaxLoc ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 254
+Skipping test case generation for test ID 2 as tesType is RANDOM
+Skipping test case generation for test ID 3 as tesType is RANDOM
+Skipping test case generation for test ID 4 as tesType is RANDOM
+Skipping test case generation for test ID 5 as tesType is RANDOM
+Skipping test case generation for test ID 6 as tesType is RANDOM
+Skipping test case generation for test ID 7 as tesType is RANDOM
+Skipping test case generation for test ID 8 as tesType is RANDOM
+Test case generation completed for test ID 9 w/ min: 33 and max 33
+Test case generation completed for test ID 10 w/ min: 96 and max 96
+Skipping test case generation for test ID 11 as tesType is RANDOM
+Skipping test case generation for test ID 12 as tesType is RANDOM
+Skipping test case generation for test ID 13 as tesType is RANDOM
+Test case generation completed for test ID 14 w/ min: 0 and max 254
+Skipping test case generation for test ID 15 as tesType is RANDOM
+Skipping test case generation for test ID 16 as tesType is RANDOM
+Test case generation completed for test ID 17 w/ min: 0 and max 254
+Skipping test case generation for test ID 18 as tesType is RANDOM
+Skipping test case generation for test ID 19 as tesType is RANDOM
+Skipping test case generation for test ID 20 as tesType is RANDOM
+Test case generation completed for test ID 21 w/ min: 28815 and max 28815
+Test case generation completed for test ID 22 w/ min: 15273 and max 15273
+Skipping test case generation for test ID 23 as tesType is RANDOM
+Skipping test case generation for test ID 24 as tesType is RANDOM
+Skipping test case generation for test ID 25 as tesType is RANDOM
+Skipping test case generation for test ID 26 as tesType is RANDOM
+~/vxlib/cmake
+
+Traceback (most recent call last):
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_minMaxLoc/gen_data.py", line 306, in <module>
+    gen_test_case(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_minMaxLoc/gen_data.py", line 275, in gen_test_case
+    [minY, maxY] = gen_test_case_header_file(testCase)
+  File "/home/andrew/vxlib/test/VXLIB_idat_gen/VXLIB_minMaxLoc/gen_data.py", line 231, in gen_test_case_header_file
+    maxVal = np.maximum((np.max(in0)), maxVal)
+OverflowError: Python integer -37768 out of bounds for int16
+
+##############################################################
+
+ Generating test case headers for VXLIB_median
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_median ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 212
+Test case generation completed for test ID 2 w/ min: 0 and max 188
+Skipping test case generation for test ID 3 as tesType is RANDOM
+Skipping test case generation for test ID 4 as tesType is RANDOM
+Skipping test case generation for test ID 5 as tesType is RANDOM
+Skipping test case generation for test ID 6 as tesType is RANDOM
+Skipping test case generation for test ID 7 as tesType is RANDOM
+Skipping test case generation for test ID 8 as tesType is RANDOM
+Skipping test case generation for test ID 9 as tesType is RANDOM
+Skipping test case generation for test ID 10 as tesType is RANDOM
+Skipping test case generation for test ID 11 as tesType is RANDOM
+Skipping test case generation for test ID 12 as tesType is RANDOM
+Skipping test case generation for test ID 13 as tesType is RANDOM
+Skipping test case generation for test ID 14 as tesType is RANDOM
+Skipping test case generation for test ID 15 as tesType is RANDOM
+Skipping test case generation for test ID 16 as tesType is RANDOM
+Skipping test case generation for test ID 17 as tesType is RANDOM
+Skipping test case generation for test ID 18 as tesType is RANDOM
+Test case generation completed for test ID 19 w/ min: 0 and max 118
+Test case generation completed for test ID 20 w/ min: 0 and max 95
+Test case generation completed for test ID 21 w/ min: 0 and max 243
+Test case generation completed for test ID 22 w/ min: 0 and max 234
+Skipping test case generation for test ID 23 as tesType is RANDOM
+Skipping test case generation for test ID 24 as tesType is RANDOM
+Skipping test case generation for test ID 25 as tesType is RANDOM
+Skipping test case generation for test ID 26 as tesType is RANDOM
+Skipping test case generation for test ID 27 as tesType is RANDOM
+Test case generation completed for test ID 28 w/ min: 0 and max 64967
+Skipping test case generation for test ID 29 as tesType is RANDOM
+Skipping test case generation for test ID 30 as tesType is RANDOM
+Skipping test case generation for test ID 31 as tesType is RANDOM
+Skipping test case generation for test ID 32 as tesType is RANDOM
+Test case generation completed for test ID 33 w/ min: 0 and max 127
+Test case generation completed for test ID 34 w/ min: 0 and max 196
+Skipping test case generation for test ID 35 as tesType is RANDOM
+Skipping test case generation for test ID 36 as tesType is RANDOM
+Skipping test case generation for test ID 37 as tesType is RANDOM
+Skipping test case generation for test ID 38 as tesType is RANDOM
+Skipping test case generation for test ID 39 as tesType is RANDOM
+Skipping test case generation for test ID 40 as tesType is RANDOM
+Test case generation completed for test ID 41 w/ min: -39 and max 2
+Test case generation completed for test ID 42 w/ min: -103 and max 67
+Skipping test case generation for test ID 43 as tesType is RANDOM
+Skipping test case generation for test ID 44 as tesType is RANDOM
+Skipping test case generation for test ID 45 as tesType is RANDOM
+Skipping test case generation for test ID 46 as tesType is RANDOM
+Skipping test case generation for test ID 47 as tesType is RANDOM
+Skipping test case generation for test ID 48 as tesType is RANDOM
+Test case generation completed for test ID 49 w/ min: 0 and max 51514
+Test case generation completed for test ID 50 w/ min: 0 and max 44375
+Skipping test case generation for test ID 51 as tesType is RANDOM
+Skipping test case generation for test ID 52 as tesType is RANDOM
+Skipping test case generation for test ID 53 as tesType is RANDOM
+Skipping test case generation for test ID 54 as tesType is RANDOM
+Skipping test case generation for test ID 55 as tesType is RANDOM
+Skipping test case generation for test ID 56 as tesType is RANDOM
+Test case generation completed for test ID 57 w/ min: -6534 and max 0
+Test case generation completed for test ID 58 w/ min: -9795 and max 14896
+Skipping test case generation for test ID 59 as tesType is RANDOM
+Skipping test case generation for test ID 60 as tesType is RANDOM
+Skipping test case generation for test ID 61 as tesType is RANDOM
+Skipping test case generation for test ID 62 as tesType is RANDOM
+Skipping test case generation for test ID 63 as tesType is RANDOM
+Skipping test case generation for test ID 64 as tesType is RANDOM
+Skipping test case generation for test ID 65 as tesType is RANDOM
+Skipping test case generation for test ID 66 as tesType is RANDOM
+Skipping test case generation for test ID 67 as tesType is RANDOM
+Skipping test case generation for test ID 68 as tesType is RANDOM
+Skipping test case generation for test ID 69 as tesType is RANDOM
+Skipping test case generation for test ID 70 as tesType is RANDOM
+Skipping test case generation for test ID 71 as tesType is RANDOM
+Skipping test case generation for test ID 72 as tesType is RANDOM
+Skipping test case generation for test ID 73 as tesType is RANDOM
+Skipping test case generation for test ID 74 as tesType is RANDOM
+Skipping test case generation for test ID 75 as tesType is RANDOM
+Skipping test case generation for test ID 76 as tesType is RANDOM
+Skipping test case generation for test ID 77 as tesType is RANDOM
+Skipping test case generation for test ID 78 as tesType is RANDOM
+Skipping test case generation for test ID 79 as tesType is RANDOM
+Skipping test case generation for test ID 80 as tesType is RANDOM
+Skipping test case generation for test ID 81 as tesType is RANDOM
+Skipping test case generation for test ID 82 as tesType is RANDOM
+Skipping test case generation for test ID 83 as tesType is RANDOM
+Skipping test case generation for test ID 84 as tesType is RANDOM
+Skipping test case generation for test ID 85 as tesType is RANDOM
+Skipping test case generation for test ID 86 as tesType is RANDOM
+Skipping test case generation for test ID 87 as tesType is RANDOM
+Skipping test case generation for test ID 88 as tesType is RANDOM
+Skipping test case generation for test ID 89 as tesType is RANDOM
+Skipping test case generation for test ID 90 as tesType is RANDOM
+Skipping test case generation for test ID 91 as tesType is RANDOM
+Skipping test case generation for test ID 92 as tesType is RANDOM
+Skipping test case generation for test ID 93 as tesType is RANDOM
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_subtract
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_subtract ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 236
+Test case generation completed for test ID 2 w/ min: 0 and max 243
+Test case generation completed for test ID 3 w/ min: 0 and max 250
+Skipping test case generation for test ID 4 as tesType is RANDOM
+Skipping test case generation for test ID 5 as tesType is RANDOM
+Skipping test case generation for test ID 6 as tesType is RANDOM
+Skipping test case generation for test ID 7 as tesType is RANDOM
+Test case generation completed for test ID 8 w/ min: 0 and max 255
+Test case generation completed for test ID 9 w/ min: 0 and max 255
+Test case generation completed for test ID 10 w/ min: 0 and max 255
+Skipping test case generation for test ID 11 as tesType is RANDOM
+Skipping test case generation for test ID 12 as tesType is RANDOM
+Skipping test case generation for test ID 13 as tesType is RANDOM
+Skipping test case generation for test ID 14 as tesType is RANDOM
+Test case generation completed for test ID 15 w/ min: -219 and max 213
+Test case generation completed for test ID 16 w/ min: -236 and max 244
+Test case generation completed for test ID 17 w/ min: -243 and max 253
+Skipping test case generation for test ID 18 as tesType is RANDOM
+Skipping test case generation for test ID 19 as tesType is RANDOM
+Skipping test case generation for test ID 20 as tesType is RANDOM
+Skipping test case generation for test ID 21 as tesType is RANDOM
+Test case generation completed for test ID 22 w/ min: -236 and max 222
+Test case generation completed for test ID 23 w/ min: -253 and max 249
+Test case generation completed for test ID 24 w/ min: -250 and max 250
+Skipping test case generation for test ID 25 as tesType is RANDOM
+Skipping test case generation for test ID 26 as tesType is RANDOM
+Skipping test case generation for test ID 27 as tesType is RANDOM
+Skipping test case generation for test ID 28 as tesType is RANDOM
+Test case generation completed for test ID 29 w/ min: -32768 and max 32767
+Test case generation completed for test ID 30 w/ min: -32768 and max 32767
+Test case generation completed for test ID 31 w/ min: -32768 and max 32767
+Skipping test case generation for test ID 32 as tesType is RANDOM
+Skipping test case generation for test ID 33 as tesType is RANDOM
+Skipping test case generation for test ID 34 as tesType is RANDOM
+Skipping test case generation for test ID 35 as tesType is RANDOM
+Test case generation completed for test ID 36 w/ min: -32661 and max 31426
+Test case generation completed for test ID 37 w/ min: -32719 and max 32668
+Test case generation completed for test ID 38 w/ min: -32759 and max 32746
+Skipping test case generation for test ID 39 as tesType is RANDOM
+Skipping test case generation for test ID 40 as tesType is RANDOM
+Skipping test case generation for test ID 41 as tesType is RANDOM
+Skipping test case generation for test ID 42 as tesType is RANDOM
+Test case generation completed for test ID 43 w/ min: -32536 and max 32666
+Test case generation completed for test ID 44 w/ min: -32626 and max 32767
+Test case generation completed for test ID 45 w/ min: -32628 and max 32767
+Skipping test case generation for test ID 46 as tesType is RANDOM
+Skipping test case generation for test ID 47 as tesType is RANDOM
+Skipping test case generation for test ID 48 as tesType is RANDOM
+Skipping test case generation for test ID 49 as tesType is RANDOM
+Test case generation completed for test ID 50 w/ min: -32499 and max 32580
+Test case generation completed for test ID 51 w/ min: -32635 and max 32592
+Test case generation completed for test ID 52 w/ min: -32760 and max 32748
+Skipping test case generation for test ID 53 as tesType is RANDOM
+Skipping test case generation for test ID 54 as tesType is RANDOM
+Skipping test case generation for test ID 55 as tesType is RANDOM
+Skipping test case generation for test ID 56 as tesType is RANDOM
+Test case generation completed for test ID 57 w/ min: -32768 and max 32653
+Test case generation completed for test ID 58 w/ min: -32768 and max 32607
+Test case generation completed for test ID 59 w/ min: -32768 and max 32686
+Skipping test case generation for test ID 60 as tesType is RANDOM
+Skipping test case generation for test ID 61 as tesType is RANDOM
+Skipping test case generation for test ID 62 as tesType is RANDOM
+Skipping test case generation for test ID 63 as tesType is RANDOM
+Test case generation completed for test ID 64 w/ min: -32717 and max 31865
+Test case generation completed for test ID 65 w/ min: -32761 and max 32740
+Test case generation completed for test ID 66 w/ min: -32751 and max 32762
+Skipping test case generation for test ID 67 as tesType is RANDOM
+Skipping test case generation for test ID 68 as tesType is RANDOM
+Skipping test case generation for test ID 69 as tesType is RANDOM
+Skipping test case generation for test ID 70 as tesType is RANDOM
+Skipping test case generation for test ID 71 as tesType is RANDOM
+Skipping test case generation for test ID 72 as tesType is RANDOM
+Skipping test case generation for test ID 73 as tesType is RANDOM
+Skipping test case generation for test ID 74 as tesType is RANDOM
+Skipping test case generation for test ID 75 as tesType is RANDOM
+Skipping test case generation for test ID 76 as tesType is RANDOM
+Skipping test case generation for test ID 77 as tesType is RANDOM
+Skipping test case generation for test ID 78 as tesType is RANDOM
+Skipping test case generation for test ID 79 as tesType is RANDOM
+Skipping test case generation for test ID 80 as tesType is RANDOM
+Skipping test case generation for test ID 81 as tesType is RANDOM
+Skipping test case generation for test ID 82 as tesType is RANDOM
+Skipping test case generation for test ID 83 as tesType is RANDOM
+Skipping test case generation for test ID 84 as tesType is RANDOM
+Skipping test case generation for test ID 85 as tesType is RANDOM
+Skipping test case generation for test ID 86 as tesType is RANDOM
+Skipping test case generation for test ID 87 as tesType is RANDOM
+Skipping test case generation for test ID 88 as tesType is RANDOM
+Skipping test case generation for test ID 89 as tesType is RANDOM
+Skipping test case generation for test ID 90 as tesType is RANDOM
+Skipping test case generation for test ID 91 as tesType is RANDOM
+Skipping test case generation for test ID 92 as tesType is RANDOM
+Skipping test case generation for test ID 93 as tesType is RANDOM
+Skipping test case generation for test ID 94 as tesType is RANDOM
+Skipping test case generation for test ID 95 as tesType is RANDOM
+Skipping test case generation for test ID 96 as tesType is RANDOM
+Skipping test case generation for test ID 97 as tesType is RANDOM
+Skipping test case generation for test ID 98 as tesType is RANDOM
+Skipping test case generation for test ID 99 as tesType is RANDOM
+Skipping test case generation for test ID 100 as tesType is RANDOM
+Skipping test case generation for test ID 101 as tesType is RANDOM
+Skipping test case generation for test ID 102 as tesType is RANDOM
+Skipping test case generation for test ID 103 as tesType is RANDOM
+Skipping test case generation for test ID 104 as tesType is RANDOM
+Skipping test case generation for test ID 105 as tesType is RANDOM
+Skipping test case generation for test ID 106 as tesType is RANDOM
+Skipping test case generation for test ID 107 as tesType is RANDOM
+Skipping test case generation for test ID 108 as tesType is RANDOM
+Skipping test case generation for test ID 109 as tesType is RANDOM
+Skipping test case generation for test ID 110 as tesType is RANDOM
+Skipping test case generation for test ID 111 as tesType is RANDOM
+Skipping test case generation for test ID 112 as tesType is RANDOM
+Skipping test case generation for test ID 113 as tesType is RANDOM
+Skipping test case generation for test ID 114 as tesType is RANDOM
+Skipping test case generation for test ID 115 as tesType is RANDOM
+Skipping test case generation for test ID 116 as tesType is RANDOM
+Skipping test case generation for test ID 117 as tesType is RANDOM
+Skipping test case generation for test ID 118 as tesType is RANDOM
+Skipping test case generation for test ID 119 as tesType is RANDOM
+Skipping test case generation for test ID 120 as tesType is RANDOM
+Skipping test case generation for test ID 121 as tesType is RANDOM
+Skipping test case generation for test ID 122 as tesType is RANDOM
+Skipping test case generation for test ID 123 as tesType is RANDOM
+Skipping test case generation for test ID 124 as tesType is RANDOM
+Skipping test case generation for test ID 125 as tesType is RANDOM
+Skipping test case generation for test ID 126 as tesType is RANDOM
+Skipping test case generation for test ID 127 as tesType is RANDOM
+Skipping test case generation for test ID 128 as tesType is RANDOM
+Skipping test case generation for test ID 129 as tesType is RANDOM
+Skipping test case generation for test ID 130 as tesType is RANDOM
+Skipping test case generation for test ID 131 as tesType is RANDOM
+Skipping test case generation for test ID 132 as tesType is RANDOM
+Skipping test case generation for test ID 133 as tesType is RANDOM
+Skipping test case generation for test ID 134 as tesType is RANDOM
+Skipping test case generation for test ID 135 as tesType is RANDOM
+Skipping test case generation for test ID 136 as tesType is RANDOM
+Skipping test case generation for test ID 137 as tesType is RANDOM
+Skipping test case generation for test ID 138 as tesType is RANDOM
+Skipping test case generation for test ID 139 as tesType is RANDOM
+Skipping test case generation for test ID 140 as tesType is RANDOM
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_magnitude
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_magnitude ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 1550 and max 32767
+Test case generation completed for test ID 2 w/ min: 166 and max 32767
+Test case generation completed for test ID 3 w/ min: 329 and max 32767
+Test case generation completed for test ID 4 w/ min: 77 and max 32767
+Test case generation completed for test ID 5 w/ min: 2526 and max 32767
+Test case generation completed for test ID 6 w/ min: 1458 and max 32767
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_multiply
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_multiply ~/vxlib/cmake
+scale:  -6067.786 <class 'numpy.float32'>
+Test case generation completed for test ID 1 w/ min: 0 and max 0
+Skipping test case generation for test ID 2 as tesType is RANDOM
+Skipping test case generation for test ID 3 as tesType is RANDOM
+scale:  -492.5326 <class 'numpy.float32'>
+Test case generation completed for test ID 4 w/ min: 0 and max 255
+Skipping test case generation for test ID 5 as tesType is RANDOM
+Skipping test case generation for test ID 6 as tesType is RANDOM
+Skipping test case generation for test ID 7 as tesType is RANDOM
+Skipping test case generation for test ID 8 as tesType is RANDOM
+Skipping test case generation for test ID 9 as tesType is RANDOM
+Skipping test case generation for test ID 10 as tesType is RANDOM
+Skipping test case generation for test ID 11 as tesType is RANDOM
+Skipping test case generation for test ID 12 as tesType is RANDOM
+Skipping test case generation for test ID 13 as tesType is RANDOM
+Skipping test case generation for test ID 14 as tesType is RANDOM
+Skipping test case generation for test ID 15 as tesType is RANDOM
+Skipping test case generation for test ID 16 as tesType is RANDOM
+Skipping test case generation for test ID 17 as tesType is RANDOM
+Skipping test case generation for test ID 18 as tesType is RANDOM
+scale:  15.0 <class 'numpy.float32'>
+Test case generation completed for test ID 19 w/ min: 0 and max 255
+Skipping test case generation for test ID 20 as tesType is RANDOM
+Skipping test case generation for test ID 21 as tesType is RANDOM
+scale:  23.0 <class 'numpy.float32'>
+Test case generation completed for test ID 22 w/ min: 0 and max 255
+Skipping test case generation for test ID 23 as tesType is RANDOM
+Skipping test case generation for test ID 24 as tesType is RANDOM
+scale:  0.5 <class 'numpy.float32'>
+Test case generation completed for test ID 25 w/ min: 0 and max 255
+Skipping test case generation for test ID 26 as tesType is RANDOM
+Skipping test case generation for test ID 27 as tesType is RANDOM
+scale:  1.1920929e-07 <class 'numpy.float32'>
+Test case generation completed for test ID 28 w/ min: 0 and max 0
+Skipping test case generation for test ID 29 as tesType is RANDOM
+Skipping test case generation for test ID 30 as tesType is RANDOM
+Skipping test case generation for test ID 31 as tesType is RANDOM
+Skipping test case generation for test ID 32 as tesType is RANDOM
+Skipping test case generation for test ID 33 as tesType is RANDOM
+Skipping test case generation for test ID 34 as tesType is RANDOM
+Skipping test case generation for test ID 35 as tesType is RANDOM
+Skipping test case generation for test ID 36 as tesType is RANDOM
+Skipping test case generation for test ID 37 as tesType is RANDOM
+Skipping test case generation for test ID 38 as tesType is RANDOM
+Skipping test case generation for test ID 39 as tesType is RANDOM
+Skipping test case generation for test ID 40 as tesType is RANDOM
+Skipping test case generation for test ID 41 as tesType is RANDOM
+Skipping test case generation for test ID 42 as tesType is RANDOM
+Skipping test case generation for test ID 43 as tesType is RANDOM
+Skipping test case generation for test ID 44 as tesType is RANDOM
+Skipping test case generation for test ID 45 as tesType is RANDOM
+Skipping test case generation for test ID 46 as tesType is RANDOM
+Skipping test case generation for test ID 47 as tesType is RANDOM
+Skipping test case generation for test ID 48 as tesType is RANDOM
+Skipping test case generation for test ID 49 as tesType is RANDOM
+Skipping test case generation for test ID 50 as tesType is RANDOM
+Skipping test case generation for test ID 51 as tesType is RANDOM
+Skipping test case generation for test ID 52 as tesType is RANDOM
+Skipping test case generation for test ID 53 as tesType is RANDOM
+Skipping test case generation for test ID 54 as tesType is RANDOM
+Skipping test case generation for test ID 55 as tesType is RANDOM
+Skipping test case generation for test ID 56 as tesType is RANDOM
+Skipping test case generation for test ID 57 as tesType is RANDOM
+Skipping test case generation for test ID 58 as tesType is RANDOM
+Skipping test case generation for test ID 59 as tesType is RANDOM
+Skipping test case generation for test ID 60 as tesType is RANDOM
+scale:  -2.3146281 <class 'numpy.float32'>
+Test case generation completed for test ID 61 w/ min: -32747 and max 32757
+Skipping test case generation for test ID 62 as tesType is RANDOM
+Skipping test case generation for test ID 63 as tesType is RANDOM
+Skipping test case generation for test ID 64 as tesType is RANDOM
+Skipping test case generation for test ID 65 as tesType is RANDOM
+Skipping test case generation for test ID 66 as tesType is RANDOM
+Skipping test case generation for test ID 67 as tesType is RANDOM
+Skipping test case generation for test ID 68 as tesType is RANDOM
+Skipping test case generation for test ID 69 as tesType is RANDOM
+scale:  8.0 <class 'numpy.float32'>
+Test case generation completed for test ID 70 w/ min: 0 and max 32767
+Skipping test case generation for test ID 71 as tesType is RANDOM
+Skipping test case generation for test ID 72 as tesType is RANDOM
+scale:  26.0 <class 'numpy.float32'>
+Test case generation completed for test ID 73 w/ min: -32762 and max 32760
+Skipping test case generation for test ID 74 as tesType is RANDOM
+Skipping test case generation for test ID 75 as tesType is RANDOM
+Skipping test case generation for test ID 76 as tesType is RANDOM
+Skipping test case generation for test ID 77 as tesType is RANDOM
+Skipping test case generation for test ID 78 as tesType is RANDOM
+scale:  0.001953125 <class 'numpy.float32'>
+Test case generation completed for test ID 79 w/ min: 0 and max 123
+Skipping test case generation for test ID 80 as tesType is RANDOM
+Skipping test case generation for test ID 81 as tesType is RANDOM
+Skipping test case generation for test ID 82 as tesType is RANDOM
+Skipping test case generation for test ID 83 as tesType is RANDOM
+Skipping test case generation for test ID 84 as tesType is RANDOM
+Skipping test case generation for test ID 85 as tesType is RANDOM
+Skipping test case generation for test ID 86 as tesType is RANDOM
+Skipping test case generation for test ID 87 as tesType is RANDOM
+Skipping test case generation for test ID 88 as tesType is RANDOM
+Skipping test case generation for test ID 89 as tesType is RANDOM
+Skipping test case generation for test ID 90 as tesType is RANDOM
+Skipping test case generation for test ID 91 as tesType is RANDOM
+Skipping test case generation for test ID 92 as tesType is RANDOM
+Skipping test case generation for test ID 93 as tesType is RANDOM
+Skipping test case generation for test ID 94 as tesType is RANDOM
+Skipping test case generation for test ID 95 as tesType is RANDOM
+Skipping test case generation for test ID 96 as tesType is RANDOM
+Skipping test case generation for test ID 97 as tesType is RANDOM
+Skipping test case generation for test ID 98 as tesType is RANDOM
+Skipping test case generation for test ID 99 as tesType is RANDOM
+Skipping test case generation for test ID 100 as tesType is RANDOM
+scale:  -0.38152248 <class 'numpy.float32'>
+Test case generation completed for test ID 101 w/ min: -32768 and max 32767
+Skipping test case generation for test ID 102 as tesType is RANDOM
+Skipping test case generation for test ID 103 as tesType is RANDOM
+scale:  1.5432197 <class 'numpy.float32'>
+Test case generation completed for test ID 104 w/ min: -32759 and max 32756
+Skipping test case generation for test ID 105 as tesType is RANDOM
+Skipping test case generation for test ID 106 as tesType is RANDOM
+Skipping test case generation for test ID 107 as tesType is RANDOM
+Skipping test case generation for test ID 108 as tesType is RANDOM
+Skipping test case generation for test ID 109 as tesType is RANDOM
+Skipping test case generation for test ID 110 as tesType is RANDOM
+Skipping test case generation for test ID 111 as tesType is RANDOM
+Skipping test case generation for test ID 112 as tesType is RANDOM
+scale:  46.0 <class 'numpy.float32'>
+Test case generation completed for test ID 113 w/ min: -32768 and max 32767
+Skipping test case generation for test ID 114 as tesType is RANDOM
+Skipping test case generation for test ID 115 as tesType is RANDOM
+Skipping test case generation for test ID 116 as tesType is RANDOM
+Skipping test case generation for test ID 117 as tesType is RANDOM
+Skipping test case generation for test ID 118 as tesType is RANDOM
+Skipping test case generation for test ID 119 as tesType is RANDOM
+Skipping test case generation for test ID 120 as tesType is RANDOM
+Skipping test case generation for test ID 121 as tesType is RANDOM
+scale:  0.015625 <class 'numpy.float32'>
+Test case generation completed for test ID 122 w/ min: -32754 and max 32752
+Skipping test case generation for test ID 123 as tesType is RANDOM
+Skipping test case generation for test ID 124 as tesType is RANDOM
+Skipping test case generation for test ID 125 as tesType is RANDOM
+Skipping test case generation for test ID 126 as tesType is RANDOM
+Skipping test case generation for test ID 127 as tesType is RANDOM
+Skipping test case generation for test ID 128 as tesType is RANDOM
+Skipping test case generation for test ID 129 as tesType is RANDOM
+Skipping test case generation for test ID 130 as tesType is RANDOM
+Skipping test case generation for test ID 131 as tesType is RANDOM
+Skipping test case generation for test ID 132 as tesType is RANDOM
+Skipping test case generation for test ID 133 as tesType is RANDOM
+Skipping test case generation for test ID 134 as tesType is RANDOM
+Skipping test case generation for test ID 135 as tesType is RANDOM
+Skipping test case generation for test ID 136 as tesType is RANDOM
+Skipping test case generation for test ID 137 as tesType is RANDOM
+Skipping test case generation for test ID 138 as tesType is RANDOM
+Skipping test case generation for test ID 139 as tesType is RANDOM
+Skipping test case generation for test ID 140 as tesType is RANDOM
+Skipping test case generation for test ID 141 as tesType is RANDOM
+Skipping test case generation for test ID 142 as tesType is RANDOM
+scale:  -5886.5117 <class 'numpy.float32'>
+Test case generation completed for test ID 143 w/ min: -32768 and max 32767
+Skipping test case generation for test ID 144 as tesType is RANDOM
+Skipping test case generation for test ID 145 as tesType is RANDOM
+Skipping test case generation for test ID 146 as tesType is RANDOM
+Skipping test case generation for test ID 147 as tesType is RANDOM
+Skipping test case generation for test ID 148 as tesType is RANDOM
+Skipping test case generation for test ID 149 as tesType is RANDOM
+Skipping test case generation for test ID 150 as tesType is RANDOM
+Skipping test case generation for test ID 151 as tesType is RANDOM
+Skipping test case generation for test ID 152 as tesType is RANDOM
+Skipping test case generation for test ID 153 as tesType is RANDOM
+scale:  -5.7278645e-05 <class 'numpy.float32'>
+Test case generation completed for test ID 154 w/ min: -32768 and max 32767
+Skipping test case generation for test ID 155 as tesType is RANDOM
+Skipping test case generation for test ID 156 as tesType is RANDOM
+scale:  5.43299e-05 <class 'numpy.float32'>
+Test case generation completed for test ID 157 w/ min: -32752 and max 32751
+Skipping test case generation for test ID 158 as tesType is RANDOM
+Skipping test case generation for test ID 159 as tesType is RANDOM
+Skipping test case generation for test ID 160 as tesType is RANDOM
+Skipping test case generation for test ID 161 as tesType is RANDOM
+Skipping test case generation for test ID 162 as tesType is RANDOM
+scale:  47.0 <class 'numpy.float32'>
+Test case generation completed for test ID 163 w/ min: -32746 and max 32725
+Skipping test case generation for test ID 164 as tesType is RANDOM
+Skipping test case generation for test ID 165 as tesType is RANDOM
+scale:  3.0517578e-05 <class 'numpy.float32'>
+Test case generation completed for test ID 166 w/ min: -31728 and max 31959
+Skipping test case generation for test ID 167 as tesType is RANDOM
+Skipping test case generation for test ID 168 as tesType is RANDOM
+scale:  0.125 <class 'numpy.float32'>
+Test case generation completed for test ID 169 w/ min: -32764 and max 32763
+Skipping test case generation for test ID 170 as tesType is RANDOM
+Skipping test case generation for test ID 171 as tesType is RANDOM
+Skipping test case generation for test ID 172 as tesType is RANDOM
+Skipping test case generation for test ID 173 as tesType is RANDOM
+Skipping test case generation for test ID 174 as tesType is RANDOM
+Skipping test case generation for test ID 175 as tesType is RANDOM
+Skipping test case generation for test ID 176 as tesType is RANDOM
+Skipping test case generation for test ID 177 as tesType is RANDOM
+Skipping test case generation for test ID 178 as tesType is RANDOM
+Skipping test case generation for test ID 179 as tesType is RANDOM
+Skipping test case generation for test ID 180 as tesType is RANDOM
+Skipping test case generation for test ID 181 as tesType is RANDOM
+Skipping test case generation for test ID 182 as tesType is RANDOM
+Skipping test case generation for test ID 183 as tesType is RANDOM
+Skipping test case generation for test ID 184 as tesType is RANDOM
+Skipping test case generation for test ID 185 as tesType is RANDOM
+Skipping test case generation for test ID 186 as tesType is RANDOM
+Skipping test case generation for test ID 187 as tesType is RANDOM
+Skipping test case generation for test ID 188 as tesType is RANDOM
+Skipping test case generation for test ID 189 as tesType is RANDOM
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_meanStdDev
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_meanStdDev ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 113.22222 and max 76.004425
+Test case generation completed for test ID 2 w/ min: 134.9961 and max 72.33616
+Test case generation completed for test ID 3 w/ min: 127.299805 and max 73.89091
+Test case generation completed for test ID 4 w/ min: 127.00781 and max 73.00624
+Test case generation completed for test ID 5 w/ min: 127.18701 and max 73.99896
+Test case generation completed for test ID 6 w/ min: 127.00539 and max 73.50189
+Test case generation completed for test ID 7 w/ min: 122.58261 and max 75.5282
+Test case generation completed for test ID 8 w/ min: 127.625786 and max 73.28159
+Test case generation completed for test ID 9 w/ min: 127.39612 and max 73.288155
+Test case generation completed for test ID 10 w/ min: 127.393005 and max 73.66897
+Test case generation completed for test ID 11 w/ min: 125.55185 and max 74.07922
+Test case generation completed for test ID 12 w/ min: 126.77178 and max 74.157104
+Test case generation completed for test ID 13 w/ min: 126.351456 and max 73.69127
+Test case generation completed for test ID 14 w/ min: 31013.555 and max 16603.41
+Test case generation completed for test ID 15 w/ min: 30371.54 and max 20044.865
+Test case generation completed for test ID 16 w/ min: 32815.688 and max 18928.176
+Test case generation completed for test ID 17 w/ min: 33339.74 and max 18905.676
+Test case generation completed for test ID 18 w/ min: 32857.656 and max 19000.697
+Test case generation completed for test ID 19 w/ min: 32786.598 and max 18908.568
+Test case generation completed for test ID 20 w/ min: 33012.023 and max 19018.488
+Test case generation completed for test ID 21 w/ min: 32820.953 and max 18900.422
+Test case generation completed for test ID 22 w/ min: 32608.418 and max 18761.816
+Test case generation completed for test ID 23 w/ min: 32908.543 and max 18918.031
+Test case generation completed for test ID 24 w/ min: 32849.29 and max 18915.879
+Test case generation completed for test ID 25 w/ min: 33216.934 and max 18899.926
+Test case generation completed for test ID 26 w/ min: 32564.139 and max 19076.361
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_accumulateSquareImage
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_accumulateSquareImage ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: -32752 and max 32767
+Test case generation completed for test ID 2 w/ min: -32764 and max 32756
+Test case generation completed for test ID 3 w/ min: -32763 and max 32763
+Test case generation completed for test ID 4 w/ min: -32752 and max 32767
+Test case generation completed for test ID 5 w/ min: -32767 and max 32767
+Test case generation completed for test ID 6 w/ min: -32757 and max 32767
+Test case generation completed for test ID 7 w/ min: -32708 and max 32759
+Test case generation completed for test ID 8 w/ min: -32758 and max 32767
+Test case generation completed for test ID 9 w/ min: -32759 and max 32767
+Test case generation completed for test ID 10 w/ min: -32762 and max 32745
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_addSquare
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_addSquare ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: -32758 and max 32760
+Test case generation completed for test ID 2 w/ min: -32759 and max 32757
+Test case generation completed for test ID 3 w/ min: -32759 and max 32767
+Test case generation completed for test ID 4 w/ min: -32755 and max 32767
+Test case generation completed for test ID 5 w/ min: -32763 and max 32766
+Test case generation completed for test ID 6 w/ min: -32755 and max 32765
+Test case generation completed for test ID 7 w/ min: -32755 and max 32690
+Test case generation completed for test ID 8 w/ min: -32758 and max 32767
+Test case generation completed for test ID 9 w/ min: -32662 and max 32586
+Test case generation completed for test ID 10 w/ min: -32722 and max 32647
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_accumulateImage
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_accumulateImage ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 2 and max 255
+Test case generation completed for test ID 2 w/ min: -32717 and max 32767
+Test case generation completed for test ID 3 w/ min: -32768 and max 32767
+Test case generation completed for test ID 4 w/ min: 6 and max 255
+Test case generation completed for test ID 5 w/ min: -32733 and max 32767
+Test case generation completed for test ID 6 w/ min: -32768 and max 32767
+Test case generation completed for test ID 7 w/ min: 0 and max 255
+Test case generation completed for test ID 8 w/ min: -32766 and max 32764
+Test case generation completed for test ID 9 w/ min: -32750 and max 32577
+Test case generation completed for test ID 10 w/ min: -32768 and max 32766
+Test case generation completed for test ID 11 w/ min: -32761 and max 32765
+Test case generation completed for test ID 13 w/ min: -32768 and max 32767
+Test case generation completed for test ID 14 w/ min: 2 and max 255
+Test case generation completed for test ID 15 w/ min: -32764 and max 32767
+Test case generation completed for test ID 16 w/ min: -32768 and max 32767
+Test case generation completed for test ID 17 w/ min: 0 and max 255
+Test case generation completed for test ID 18 w/ min: -32586 and max 32677
+Test case generation completed for test ID 19 w/ min: -32760 and max 32719
+Test case generation completed for test ID 20 w/ min: 0 and max 255
+Test case generation completed for test ID 23 w/ min: -32624 and max 32767
+Test case generation completed for test ID 24 w/ min: -32605 and max 32767
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_thresholdBinary
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_thresholdBinary ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 1 and max 1
+Test case generation completed for test ID 2 w/ min: 5 and max 10
+Test case generation completed for test ID 3 w/ min: 10 and max 20
+Skipping test case generation for test ID 4 as tesType is RANDOM
+Skipping test case generation for test ID 5 as tesType is RANDOM
+Skipping test case generation for test ID 6 as tesType is RANDOM
+Skipping test case generation for test ID 7 as tesType is RANDOM
+Skipping test case generation for test ID 8 as tesType is RANDOM
+Test case generation completed for test ID 9 w/ min: 0 and max 1
+Test case generation completed for test ID 10 w/ min: 5 and max 10
+Test case generation completed for test ID 11 w/ min: 10 and max 20
+Skipping test case generation for test ID 12 as tesType is RANDOM
+Skipping test case generation for test ID 13 as tesType is RANDOM
+Skipping test case generation for test ID 14 as tesType is RANDOM
+Skipping test case generation for test ID 15 as tesType is RANDOM
+Skipping test case generation for test ID 16 as tesType is RANDOM
+Test case generation completed for test ID 17 w/ min: 1 and max 1
+Test case generation completed for test ID 18 w/ min: 10 and max 10
+Test case generation completed for test ID 19 w/ min: 10 and max 20
+Skipping test case generation for test ID 20 as tesType is RANDOM
+Skipping test case generation for test ID 21 as tesType is RANDOM
+Skipping test case generation for test ID 22 as tesType is RANDOM
+Skipping test case generation for test ID 23 as tesType is RANDOM
+Skipping test case generation for test ID 24 as tesType is RANDOM
+Test case generation completed for test ID 25 w/ min: 0 and max 1
+Test case generation completed for test ID 26 w/ min: 5 and max 10
+Test case generation completed for test ID 27 w/ min: 10 and max 20
+Skipping test case generation for test ID 28 as tesType is RANDOM
+Skipping test case generation for test ID 29 as tesType is RANDOM
+Skipping test case generation for test ID 30 as tesType is RANDOM
+Skipping test case generation for test ID 31 as tesType is RANDOM
+Skipping test case generation for test ID 32 as tesType is RANDOM
+Test case generation completed for test ID 33 w/ min: 0 and max 1
+Test case generation completed for test ID 34 w/ min: 5 and max 10
+Test case generation completed for test ID 35 w/ min: 10 and max 20
+Skipping test case generation for test ID 36 as tesType is RANDOM
+Skipping test case generation for test ID 37 as tesType is RANDOM
+Skipping test case generation for test ID 38 as tesType is RANDOM
+Skipping test case generation for test ID 39 as tesType is RANDOM
+Skipping test case generation for test ID 40 as tesType is RANDOM
+Skipping test case generation for test ID 41 as tesType is RANDOM
+Test case generation completed for test ID 42 w/ min: 5 and max 10
+Test case generation completed for test ID 43 w/ min: 10 and max 20
+Test case generation completed for test ID 44 w/ min: 15 and max 30
+Skipping test case generation for test ID 45 as tesType is RANDOM
+Skipping test case generation for test ID 46 as tesType is RANDOM
+Skipping test case generation for test ID 47 as tesType is RANDOM
+Skipping test case generation for test ID 48 as tesType is RANDOM
+Skipping test case generation for test ID 49 as tesType is RANDOM
+Test case generation completed for test ID 50 w/ min: 10 and max 10
+Test case generation completed for test ID 51 w/ min: 10 and max 20
+Test case generation completed for test ID 52 w/ min: 15 and max 30
+Skipping test case generation for test ID 53 as tesType is RANDOM
+Skipping test case generation for test ID 54 as tesType is RANDOM
+Skipping test case generation for test ID 55 as tesType is RANDOM
+Skipping test case generation for test ID 56 as tesType is RANDOM
+Skipping test case generation for test ID 57 as tesType is RANDOM
+Skipping test case generation for test ID 58 as tesType is RANDOM
+Test case generation completed for test ID 59 w/ min: 15 and max 30
+Test case generation completed for test ID 60 w/ min: 20 and max 40
+Test case generation completed for test ID 61 w/ min: 25 and max 50
+Skipping test case generation for test ID 62 as tesType is RANDOM
+Skipping test case generation for test ID 63 as tesType is RANDOM
+Skipping test case generation for test ID 64 as tesType is RANDOM
+Skipping test case generation for test ID 65 as tesType is RANDOM
+Skipping test case generation for test ID 66 as tesType is RANDOM
+Skipping test case generation for test ID 67 as tesType is RANDOM
+Skipping test case generation for test ID 68 as tesType is RANDOM
+Skipping test case generation for test ID 69 as tesType is RANDOM
+Skipping test case generation for test ID 70 as tesType is RANDOM
+Test case generation completed for test ID 71 w/ min: 35 and max 70
+Test case generation completed for test ID 72 w/ min: 0 and max 1
+Test case generation completed for test ID 73 w/ min: 5 and max 10
+Skipping test case generation for test ID 74 as tesType is RANDOM
+Skipping test case generation for test ID 75 as tesType is RANDOM
+Skipping test case generation for test ID 76 as tesType is RANDOM
+Skipping test case generation for test ID 77 as tesType is RANDOM
+Skipping test case generation for test ID 78 as tesType is RANDOM
+Skipping test case generation for test ID 79 as tesType is RANDOM
+Skipping test case generation for test ID 80 as tesType is RANDOM
+Test case generation completed for test ID 81 w/ min: 10 and max 10
+Test case generation completed for test ID 82 w/ min: 10 and max 20
+Test case generation completed for test ID 83 w/ min: 15 and max 30
+Skipping test case generation for test ID 84 as tesType is RANDOM
+Skipping test case generation for test ID 85 as tesType is RANDOM
+Skipping test case generation for test ID 86 as tesType is RANDOM
+Skipping test case generation for test ID 87 as tesType is RANDOM
+Skipping test case generation for test ID 88 as tesType is RANDOM
+Skipping test case generation for test ID 89 as tesType is RANDOM
+Skipping test case generation for test ID 90 as tesType is RANDOM
+Test case generation completed for test ID 91 w/ min: 15 and max 30
+Test case generation completed for test ID 92 w/ min: 20 and max 40
+Test case generation completed for test ID 93 w/ min: 25 and max 50
+Skipping test case generation for test ID 94 as tesType is RANDOM
+Skipping test case generation for test ID 95 as tesType is RANDOM
+Skipping test case generation for test ID 96 as tesType is RANDOM
+Skipping test case generation for test ID 97 as tesType is RANDOM
+Skipping test case generation for test ID 98 as tesType is RANDOM
+Skipping test case generation for test ID 99 as tesType is RANDOM
+Skipping test case generation for test ID 100 as tesType is RANDOM
+Test case generation completed for test ID 101 w/ min: 10 and max 20
+Test case generation completed for test ID 102 w/ min: 0 and max 1
+Test case generation completed for test ID 103 w/ min: 5 and max 10
+Skipping test case generation for test ID 104 as tesType is RANDOM
+Skipping test case generation for test ID 105 as tesType is RANDOM
+Skipping test case generation for test ID 106 as tesType is RANDOM
+Skipping test case generation for test ID 107 as tesType is RANDOM
+Skipping test case generation for test ID 108 as tesType is RANDOM
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_and
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_and ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 4 and max 160
+Test case generation completed for test ID 2 w/ min: 0 and max 210
+Test case generation completed for test ID 3 w/ min: 0 and max 208
+Test case generation completed for test ID 4 w/ min: 0 and max 240
+Test case generation completed for test ID 5 w/ min: 0 and max 252
+Test case generation completed for test ID 6 w/ min: 0 and max 252
+Test case generation completed for test ID 7 w/ min: 0 and max 254
+Test case generation completed for test ID 8 w/ min: 0 and max 192
+Test case generation completed for test ID 9 w/ min: 0 and max 218
+Test case generation completed for test ID 10 w/ min: 0 and max 248
+Test case generation completed for test ID 11 w/ min: 0 and max 247
+Test case generation completed for test ID 12 w/ min: 0 and max 249
+Test case generation completed for test ID 13 w/ min: 0 and max 249
+Test case generation completed for test ID 14 w/ min: 0 and max 254
+Test case generation completed for test ID 15 w/ min: 11 and max 208
+Test case generation completed for test ID 16 w/ min: 0 and max 226
+Test case generation completed for test ID 17 w/ min: 0 and max 244
+Test case generation completed for test ID 18 w/ min: 0 and max 241
+Test case generation completed for test ID 19 w/ min: 0 and max 251
+Test case generation completed for test ID 20 w/ min: 0 and max 254
+Test case generation completed for test ID 21 w/ min: 0 and max 252
+Test case generation completed for test ID 22 w/ min: 0 and max 242
+Test case generation completed for test ID 23 w/ min: 0 and max 241
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_convolve
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_convolve ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 19
+Test case generation completed for test ID 2 w/ min: 0 and max 91
+Test case generation completed for test ID 3 w/ min: 14 and max 115
+Test case generation completed for test ID 4 w/ min: 0 and max 74
+Test case generation completed for test ID 5 w/ min: 10 and max 51
+Test case generation completed for test ID 6 w/ min: 12 and max 82
+Test case generation completed for test ID 7 w/ min: 0 and max 5
+Test case generation completed for test ID 8 w/ min: 9 and max 84
+Test case generation completed for test ID 9 w/ min: -15 and max 14
+Test case generation completed for test ID 10 w/ min: -2 and max 90
+Test case generation completed for test ID 11 w/ min: -44 and max 45
+Test case generation completed for test ID 12 w/ min: -26 and max 58
+Test case generation completed for test ID 13 w/ min: -5 and max 65
+Test case generation completed for test ID 14 w/ min: -13 and max 29
+Test case generation completed for test ID 15 w/ min: -5 and max 126
+Test case generation completed for test ID 16 w/ min: -21 and max 59
+Test case generation completed for test ID 17 w/ min: 87 and max 126
+Test case generation completed for test ID 18 w/ min: 34 and max 180
+Test case generation completed for test ID 19 w/ min: 0 and max 159
+Test case generation completed for test ID 20 w/ min: 50 and max 216
+Test case generation completed for test ID 21 w/ min: 0 and max 194
+Test case generation completed for test ID 22 w/ min: 77 and max 117
+Test case generation completed for test ID 23 w/ min: 26 and max 118
+Test case generation completed for test ID 24 w/ min: 0 and max 135
+Test case generation completed for test ID 25 w/ min: 5 and max 158
+Test case generation completed for test ID 26 w/ min: 18 and max 84
+Test case generation completed for test ID 27 w/ min: -17 and max 141
+Test case generation completed for test ID 28 w/ min: -43 and max 119
+Test case generation completed for test ID 29 w/ min: -11 and max 184
+Test case generation completed for test ID 30 w/ min: 95 and max 127
+Test case generation completed for test ID 31 w/ min: -17 and max 96
+Test case generation completed for test ID 32 w/ min: -17 and max 160
+Test case generation completed for test ID 33 w/ min: -29 and max 97
+Test case generation completed for test ID 34 w/ min: 24 and max 66
+Test case generation completed for test ID 35 w/ min: 0 and max 105
+Test case generation completed for test ID 36 w/ min: 20 and max 142
+Test case generation completed for test ID 37 w/ min: 0 and max 95
+Test case generation completed for test ID 38 w/ min: 0 and max 75
+Test case generation completed for test ID 39 w/ min: 12 and max 146
+Test case generation completed for test ID 40 w/ min: 51 and max 185
+Test case generation completed for test ID 41 w/ min: 0 and max 22
+Test case generation completed for test ID 42 w/ min: 43 and max 96
+Test case generation completed for test ID 43 w/ min: 11 and max 110
+Test case generation completed for test ID 44 w/ min: 31 and max 157
+Test case generation completed for test ID 45 w/ min: 20 and max 166
+Test case generation completed for test ID 46 w/ min: 34 and max 112
+Test case generation completed for test ID 47 w/ min: -16 and max 99
+Test case generation completed for test ID 48 w/ min: 49 and max 200
+Test case generation completed for test ID 49 w/ min: 40 and max 74
+Test case generation completed for test ID 50 w/ min: 167 and max 207
+Test case generation completed for test ID 51 w/ min: 52 and max 190
+Test case generation completed for test ID 52 w/ min: 18 and max 184
+Test case generation completed for test ID 53 w/ min: 53 and max 214
+Test case generation completed for test ID 54 w/ min: 85 and max 175
+Test case generation completed for test ID 55 w/ min: 79 and max 255
+Test case generation completed for test ID 56 w/ min: 94 and max 255
+Test case generation completed for test ID 57 w/ min: 105 and max 182
+Test case generation completed for test ID 58 w/ min: 74 and max 139
+Test case generation completed for test ID 59 w/ min: -6 and max 109
+Test case generation completed for test ID 60 w/ min: 17 and max 157
+Test case generation completed for test ID 61 w/ min: -24 and max 153
+Test case generation completed for test ID 62 w/ min: 106 and max 179
+Test case generation completed for test ID 63 w/ min: 36 and max 202
+Test case generation completed for test ID 64 w/ min: 53 and max 230
+Test case generation completed for test ID 65 w/ min: 82 and max 140
+Test case generation completed for test ID 66 w/ min: 0 and max 59
+Test case generation completed for test ID 67 w/ min: 135 and max 182
+Test case generation completed for test ID 68 w/ min: 51 and max 128
+Test case generation completed for test ID 69 w/ min: 67 and max 96
+Test case generation completed for test ID 70 w/ min: 68 and max 78
+Test case generation completed for test ID 71 w/ min: 0 and max 42
+Test case generation completed for test ID 72 w/ min: 87 and max 233
+Test case generation completed for test ID 73 w/ min: 90 and max 184
+Test case generation completed for test ID 74 w/ min: 67 and max 87
+Test case generation completed for test ID 75 w/ min: 71 and max 83
+Test case generation completed for test ID 76 w/ min: -30 and max 29
+Test case generation completed for test ID 77 w/ min: 88 and max 128
+Test case generation completed for test ID 78 w/ min: 58 and max 134
+Test case generation completed for test ID 79 w/ min: 78 and max 107
+Test case generation completed for test ID 80 w/ min: 65 and max 75
+Test case generation completed for test ID 81 w/ min: -19 and max 20
+Test case generation completed for test ID 82 w/ min: 65 and max 179
+Test case generation completed for test ID 83 w/ min: 70 and max 142
+Test case generation completed for test ID 84 w/ min: 74 and max 92
+Test case generation completed for test ID 85 w/ min: 71 and max 81
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_add
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_add ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 255
+Test case generation completed for test ID 2 w/ min: 4 and max 507
+Test case generation completed for test ID 3 w/ min: -32719 and max 32767
+Test case generation completed for test ID 4 w/ min: -32768 and max 32767
+Test case generation completed for test ID 5 w/ min: 0 and max 255
+Test case generation completed for test ID 6 w/ min: 3 and max 507
+Test case generation completed for test ID 7 w/ min: -32675 and max 32767
+Test case generation completed for test ID 8 w/ min: -32768 and max 32767
+Test case generation completed for test ID 9 w/ min: 0 and max 255
+Test case generation completed for test ID 10 w/ min: 10 and max 506
+Test case generation completed for test ID 11 w/ min: -32768 and max 32764
+Test case generation completed for test ID 12 w/ min: -32760 and max 32766
+Test case generation completed for test ID 13 w/ min: 0 and max 255
+Test case generation completed for test ID 14 w/ min: 3 and max 506
+Test case generation completed for test ID 15 w/ min: -32757 and max 32755
+Test case generation completed for test ID 16 w/ min: -32766 and max 32767
+Test case generation completed for test ID 17 w/ min: 4 and max 255
+Test case generation completed for test ID 18 w/ min: 73 and max 498
+Test case generation completed for test ID 19 w/ min: -32737 and max 32767
+Test case generation completed for test ID 20 w/ min: -32768 and max 32767
+Test case generation completed for test ID 21 w/ min: 0 and max 255
+Test case generation completed for test ID 22 w/ min: 3 and max 506
+Test case generation completed for test ID 23 w/ min: -32738 and max 32767
+Test case generation completed for test ID 24 w/ min: -32768 and max 32767
+Test case generation completed for test ID 25 w/ min: 0 and max 255
+Test case generation completed for test ID 26 w/ min: 3 and max 507
+Test case generation completed for test ID 27 w/ min: -32645 and max 32633
+Test case generation completed for test ID 28 w/ min: -32754 and max 32688
+Test case generation completed for test ID 29 w/ min: 0 and max 255
+Test case generation completed for test ID 30 w/ min: 1 and max 503
+Test case generation completed for test ID 31 w/ min: -32768 and max 32766
+Test case generation completed for test ID 32 w/ min: -32768 and max 32765
+Test case generation completed for test ID 33 w/ min: -32617 and max 32767
+Test case generation completed for test ID 34 w/ min: -32589 and max 32767
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_absDiff
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_absDiff ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 8 and max 188
+Test case generation completed for test ID 2 w/ min: 1 and max 251
+Test case generation completed for test ID 3 w/ min: 1 and max 242
+Test case generation completed for test ID 4 w/ min: 0 and max 251
+Test case generation completed for test ID 5 w/ min: 0 and max 253
+Test case generation completed for test ID 6 w/ min: 0 and max 253
+Test case generation completed for test ID 7 w/ min: 0 and max 253
+Test case generation completed for test ID 8 w/ min: 5 and max 230
+Test case generation completed for test ID 9 w/ min: 0 and max 204
+Test case generation completed for test ID 10 w/ min: 0 and max 250
+Test case generation completed for test ID 11 w/ min: 0 and max 239
+Test case generation completed for test ID 12 w/ min: 0 and max 251
+Test case generation completed for test ID 13 w/ min: 0 and max 254
+Test case generation completed for test ID 14 w/ min: 0 and max 253
+Test case generation completed for test ID 15 w/ min: 2095 and max 32767
+Test case generation completed for test ID 16 w/ min: 245 and max 32767
+Test case generation completed for test ID 17 w/ min: 80 and max 32767
+Test case generation completed for test ID 18 w/ min: 7 and max 32767
+Test case generation completed for test ID 19 w/ min: 2 and max 32767
+Test case generation completed for test ID 20 w/ min: 1 and max 32767
+Test case generation completed for test ID 21 w/ min: 0 and max 32767
+Test case generation completed for test ID 22 w/ min: 2401 and max 32767
+Test case generation completed for test ID 23 w/ min: 215 and max 32767
+Test case generation completed for test ID 24 w/ min: 101 and max 32767
+Test case generation completed for test ID 25 w/ min: 124 and max 32767
+Test case generation completed for test ID 26 w/ min: 9 and max 32767
+Test case generation completed for test ID 27 w/ min: 1 and max 32767
+Test case generation completed for test ID 28 w/ min: 0 and max 32767
+Test case generation completed for test ID 29 w/ min: 2 and max 129
+Test case generation completed for test ID 30 w/ min: 466 and max 32767
+Test case generation completed for test ID 31 w/ min: 0 and max 252
+Test case generation completed for test ID 32 w/ min: 0 and max 248
+Test case generation completed for test ID 33 w/ min: 0 and max 252
+Test case generation completed for test ID 34 w/ min: 0 and max 254
+Test case generation completed for test ID 35 w/ min: 1 and max 32767
+Test case generation completed for test ID 36 w/ min: 0 and max 244
+Test case generation completed for test ID 37 w/ min: 0 and max 247
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_halfScaleGaussian
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_halfScaleGaussian ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 117 and max 148
+Test case generation completed for test ID 2 w/ min: 76 and max 174
+Test case generation completed for test ID 3 w/ min: 69 and max 182
+Test case generation completed for test ID 4 w/ min: 67 and max 190
+Test case generation completed for test ID 5 w/ min: 75 and max 166
+Test case generation completed for test ID 6 w/ min: 85 and max 187
+Test case generation completed for test ID 7 w/ min: 63 and max 185
+Test case generation completed for test ID 8 w/ min: 58 and max 190
+Test case generation completed for test ID 9 w/ min: 53 and max 197
+Test case generation completed for test ID 10 w/ min: 45 and max 207
+Test case generation completed for test ID 11 w/ min: 70 and max 176
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_normL1
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_normL1 ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 19 and max 183
+Test case generation completed for test ID 2 w/ min: 10 and max 210
+Test case generation completed for test ID 3 w/ min: 12 and max 251
+Test case generation completed for test ID 4 w/ min: 2 and max 248
+Test case generation completed for test ID 5 w/ min: 3 and max 254
+Test case generation completed for test ID 6 w/ min: 1 and max 252
+Test case generation completed for test ID 7 w/ min: 0 and max 254
+Test case generation completed for test ID 8 w/ min: 42 and max 235
+Test case generation completed for test ID 9 w/ min: 39 and max 250
+Test case generation completed for test ID 10 w/ min: 5 and max 247
+Test case generation completed for test ID 11 w/ min: 6 and max 252
+Test case generation completed for test ID 12 w/ min: 1 and max 251
+Test case generation completed for test ID 13 w/ min: 1 and max 253
+Test case generation completed for test ID 14 w/ min: 0 and max 254
+Test case generation completed for test ID 15 w/ min: 47 and max 173
+Test case generation completed for test ID 16 w/ min: 4 and max 217
+Test case generation completed for test ID 17 w/ min: 0 and max 251
+Test case generation completed for test ID 18 w/ min: 5 and max 250
+Test case generation completed for test ID 19 w/ min: 1 and max 252
+Test case generation completed for test ID 20 w/ min: 0 and max 252
+Test case generation completed for test ID 21 w/ min: 0 and max 254
+Test case generation completed for test ID 22 w/ min: 3 and max 249
+Test case generation completed for test ID 23 w/ min: 2 and max 248
+Test case generation completed for test ID 24 w/ min: 7279 and max 54432
+Test case generation completed for test ID 25 w/ min: 3776 and max 61751
+Test case generation completed for test ID 26 w/ min: 1615 and max 64620
+Test case generation completed for test ID 27 w/ min: 1565 and max 64956
+Test case generation completed for test ID 28 w/ min: 652 and max 64560
+Test case generation completed for test ID 29 w/ min: 79 and max 64893
+Test case generation completed for test ID 30 w/ min: 140 and max 65416
+Test case generation completed for test ID 31 w/ min: 16253 and max 54028
+Test case generation completed for test ID 32 w/ min: 2222 and max 58355
+Test case generation completed for test ID 33 w/ min: 718 and max 62627
+Test case generation completed for test ID 34 w/ min: 288 and max 64720
+Test case generation completed for test ID 35 w/ min: 508 and max 65217
+Test case generation completed for test ID 36 w/ min: 404 and max 65380
+Test case generation completed for test ID 37 w/ min: 4 and max 65377
+Test case generation completed for test ID 38 w/ min: 24924 and max 60987
+Test case generation completed for test ID 39 w/ min: 5065 and max 62417
+Test case generation completed for test ID 40 w/ min: 331 and max 64343
+Test case generation completed for test ID 41 w/ min: 778 and max 63465
+Test case generation completed for test ID 42 w/ min: 691 and max 65319
+Test case generation completed for test ID 43 w/ min: 277 and max 65304
+Test case generation completed for test ID 44 w/ min: 325 and max 65063
+Test case generation completed for test ID 45 w/ min: 1612 and max 64304
+Test case generation completed for test ID 46 w/ min: 984 and max 63629
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_not
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_not ~/vxlib/cmake
+[0, 255]
+Test case generation completed for test ID 1 w/ min: 36 and max 224
+[0, 255]
+Test case generation completed for test ID 2 w/ min: 10 and max 251
+[0, 255]
+Test case generation completed for test ID 3 w/ min: 1 and max 253
+[0, 255]
+Test case generation completed for test ID 4 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 5 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 6 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 7 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 8 w/ min: 8 and max 249
+[0, 255]
+Test case generation completed for test ID 9 w/ min: 3 and max 251
+[0, 255]
+Test case generation completed for test ID 10 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 11 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 12 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 13 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 14 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 15 w/ min: 15 and max 234
+[0, 255]
+Test case generation completed for test ID 16 w/ min: 4 and max 253
+[0, 255]
+Test case generation completed for test ID 17 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 18 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 19 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 20 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 21 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 22 w/ min: 1 and max 255
+[0, 255]
+Test case generation completed for test ID 23 w/ min: 1 and max 255
+[0, 65535]
+Test case generation completed for test ID 24 w/ min: 12803 and max 61334
+[0, 65535]
+Test case generation completed for test ID 25 w/ min: 1903 and max 65019
+[0, 65535]
+Test case generation completed for test ID 26 w/ min: 171 and max 65042
+[0, 65535]
+Test case generation completed for test ID 27 w/ min: 14 and max 65511
+[0, 65535]
+Test case generation completed for test ID 28 w/ min: 22 and max 65523
+[0, 65535]
+Test case generation completed for test ID 29 w/ min: 20 and max 65527
+[0, 65535]
+Test case generation completed for test ID 30 w/ min: 1 and max 65535
+[0, 65535]
+Test case generation completed for test ID 31 w/ min: 3202 and max 63517
+[0, 65535]
+Test case generation completed for test ID 32 w/ min: 585 and max 64370
+[0, 65535]
+Test case generation completed for test ID 33 w/ min: 251 and max 65508
+[0, 65535]
+Test case generation completed for test ID 34 w/ min: 36 and max 65489
+[0, 65535]
+Test case generation completed for test ID 35 w/ min: 2 and max 65529
+[0, 65535]
+Test case generation completed for test ID 36 w/ min: 10 and max 65535
+[0, 65535]
+Test case generation completed for test ID 37 w/ min: 2 and max 65535
+[0, 65535]
+Test case generation completed for test ID 38 w/ min: 385 and max 53778
+[0, 65535]
+Test case generation completed for test ID 39 w/ min: 704 and max 64777
+[0, 65535]
+Test case generation completed for test ID 40 w/ min: 43 and max 65512
+[0, 65535]
+Test case generation completed for test ID 41 w/ min: 28 and max 65373
+[0, 65535]
+Test case generation completed for test ID 42 w/ min: 9 and max 65532
+[0, 65535]
+Test case generation completed for test ID 43 w/ min: 1 and max 65533
+[0, 65535]
+Test case generation completed for test ID 44 w/ min: 12 and max 65525
+[0, 65535]
+Test case generation completed for test ID 45 w/ min: 22 and max 65521
+[0, 65535]
+Test case generation completed for test ID 46 w/ min: 44 and max 65512
+[-128, 127]
+Test case generation completed for test ID 47 w/ min: -69 and max 126
+[-128, 127]
+Test case generation completed for test ID 48 w/ min: -125 and max 126
+[-128, 127]
+Test case generation completed for test ID 49 w/ min: -127 and max 125
+[-128, 127]
+Test case generation completed for test ID 50 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 51 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 52 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 53 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 54 w/ min: -121 and max 124
+[-128, 127]
+Test case generation completed for test ID 55 w/ min: -127 and max 124
+[-128, 127]
+Test case generation completed for test ID 56 w/ min: -126 and max 126
+[-128, 127]
+Test case generation completed for test ID 57 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 58 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 59 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 60 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 61 w/ min: -113 and max 53
+[-128, 127]
+Test case generation completed for test ID 62 w/ min: -127 and max 120
+[-128, 127]
+Test case generation completed for test ID 63 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 64 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 65 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 66 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 67 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 68 w/ min: -127 and max 126
+[-128, 127]
+Test case generation completed for test ID 69 w/ min: -127 and max 126
+[-32768, 32767]
+Test case generation completed for test ID 70 w/ min: -32659 and max 31027
+[-32768, 32767]
+Test case generation completed for test ID 71 w/ min: -32703 and max 31534
+[-32768, 32767]
+Test case generation completed for test ID 72 w/ min: -32597 and max 32268
+[-32768, 32767]
+Test case generation completed for test ID 73 w/ min: -32744 and max 32740
+[-32768, 32767]
+Test case generation completed for test ID 74 w/ min: -32742 and max 32761
+[-32768, 32767]
+Test case generation completed for test ID 75 w/ min: -32766 and max 32766
+[-32768, 32767]
+Test case generation completed for test ID 76 w/ min: -32766 and max 32766
+[-32768, 32767]
+Test case generation completed for test ID 77 w/ min: -17525 and max 30167
+[-32768, 32767]
+Test case generation completed for test ID 78 w/ min: -32444 and max 32048
+[-32768, 32767]
+Test case generation completed for test ID 79 w/ min: -32639 and max 32541
+[-32768, 32767]
+Test case generation completed for test ID 80 w/ min: -32754 and max 32681
+[-32768, 32767]
+Test case generation completed for test ID 81 w/ min: -32742 and max 32741
+[-32768, 32767]
+Test case generation completed for test ID 82 w/ min: -32767 and max 32762
+[-32768, 32767]
+Test case generation completed for test ID 83 w/ min: -32766 and max 32766
+[-32768, 32767]
+Test case generation completed for test ID 84 w/ min: -17505 and max 24125
+[-32768, 32767]
+Test case generation completed for test ID 85 w/ min: -30520 and max 32212
+[-32768, 32767]
+Test case generation completed for test ID 86 w/ min: -32763 and max 32653
+[-32768, 32767]
+Test case generation completed for test ID 87 w/ min: -32490 and max 32661
+[-32768, 32767]
+Test case generation completed for test ID 88 w/ min: -32767 and max 32722
+[-32768, 32767]
+Test case generation completed for test ID 89 w/ min: -32764 and max 32759
+[-32768, 32767]
+Test case generation completed for test ID 90 w/ min: -32766 and max 32764
+[-32768, 32767]
+Test case generation completed for test ID 91 w/ min: -32717 and max 32742
+[-32768, 32767]
+Test case generation completed for test ID 92 w/ min: -32701 and max 32722
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_box
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_box ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 0
+Test case generation completed for test ID 2 w/ min: 0 and max 0
+Test case generation completed for test ID 3 w/ min: 0 and max 0
+Test case generation completed for test ID 4 w/ min: 0 and max 0
+Test case generation completed for test ID 5 w/ min: 0 and max 0
+Test case generation completed for test ID 6 w/ min: 0 and max 0
+Test case generation completed for test ID 7 w/ min: 0 and max 0
+Test case generation completed for test ID 8 w/ min: 0 and max 0
+Test case generation completed for test ID 9 w/ min: 0 and max 0
+Test case generation completed for test ID 10 w/ min: 0 and max 0
+Test case generation completed for test ID 11 w/ min: 0 and max 0
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_convertDepth
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_convertDepth ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 128 and max 896
+Test case generation completed for test ID 2 w/ min: 8 and max 1008
+Test case generation completed for test ID 3 w/ min: 0 and max 1004
+Test case generation completed for test ID 4 w/ min: 0 and max 1016
+Test case generation completed for test ID 5 w/ min: 0 and max 1016
+Test case generation completed for test ID 6 w/ min: 0 and max 1016
+Test case generation completed for test ID 7 w/ min: 0 and max 1016
+Test case generation completed for test ID 8 w/ min: 0 and max 1016
+Test case generation completed for test ID 9 w/ min: 168 and max 856
+Test case generation completed for test ID 10 w/ min: 28 and max 1008
+Test case generation completed for test ID 11 w/ min: 0 and max 1012
+Test case generation completed for test ID 12 w/ min: 0 and max 1016
+Test case generation completed for test ID 13 w/ min: 0 and max 1016
+Test case generation completed for test ID 14 w/ min: 0 and max 1016
+Test case generation completed for test ID 15 w/ min: 0 and max 1016
+Test case generation completed for test ID 16 w/ min: 0 and max 1016
+Test case generation completed for test ID 17 w/ min: 2 and max 254
+Test case generation completed for test ID 18 w/ min: 4 and max 255
+Test case generation completed for test ID 19 w/ min: 2 and max 252
+Test case generation completed for test ID 20 w/ min: 0 and max 254
+Test case generation completed for test ID 21 w/ min: 0 and max 255
+Test case generation completed for test ID 22 w/ min: 0 and max 255
+Test case generation completed for test ID 23 w/ min: 0 and max 255
+Test case generation completed for test ID 24 w/ min: 45 and max 201
+Test case generation completed for test ID 25 w/ min: 1 and max 255
+Test case generation completed for test ID 26 w/ min: 0 and max 254
+Test case generation completed for test ID 27 w/ min: 0 and max 255
+Test case generation completed for test ID 28 w/ min: 0 and max 255
+Test case generation completed for test ID 29 w/ min: 0 and max 255
+Test case generation completed for test ID 30 w/ min: 0 and max 255
+Test case generation completed for test ID 31 w/ min: 0 and max 255
+Test case generation completed for test ID 32 w/ min: 0 and max 255
+Test case generation completed for test ID 33 w/ min: 0 and max 255
+Test case generation completed for test ID 34 w/ min: 0 and max 255
+Test case generation completed for test ID 35 w/ min: 0 and max 255
+Test case generation completed for test ID 36 w/ min: 0 and max 255
+Test case generation completed for test ID 37 w/ min: 0 and max 255
+Test case generation completed for test ID 38 w/ min: 0 and max 255
+Test case generation completed for test ID 39 w/ min: 0 and max 255
+Test case generation completed for test ID 40 w/ min: 0 and max 255
+Test case generation completed for test ID 41 w/ min: 0 and max 255
+Test case generation completed for test ID 42 w/ min: 0 and max 255
+Test case generation completed for test ID 43 w/ min: 0 and max 255
+Test case generation completed for test ID 44 w/ min: 0 and max 255
+Test case generation completed for test ID 45 w/ min: 0 and max 253
+Test case generation completed for test ID 46 w/ min: 3 and max 254
+Test case generation completed for test ID 47 w/ min: 0 and max 253
+Test case generation completed for test ID 48 w/ min: 0 and max 255
+Test case generation completed for test ID 49 w/ min: 0 and max 255
+Test case generation completed for test ID 50 w/ min: 1 and max 255
+Test case generation completed for test ID 51 w/ min: 0 and max 255
+Test case generation completed for test ID 52 w/ min: 0 and max 255
+Test case generation completed for test ID 53 w/ min: 0 and max 255
+Test case generation completed for test ID 54 w/ min: 0 and max 255
+Test case generation completed for test ID 55 w/ min: 0 and max 255
+Test case generation completed for test ID 56 w/ min: 0 and max 255
+Test case generation completed for test ID 57 w/ min: 16 and max 896
+Test case generation completed for test ID 58 w/ min: 4 and max 1008
+Test case generation completed for test ID 59 w/ min: 0 and max 1016
+Test case generation completed for test ID 60 w/ min: 0 and max 8128
+Test case generation completed for test ID 61 w/ min: 0 and max 255
+Test case generation completed for test ID 62 w/ min: 0 and max 255
+Test case generation completed for test ID 63 w/ min: 0 and max 254
+Test case generation completed for test ID 64 w/ min: 0 and max 255
+Test case generation completed for test ID 65 w/ min: 0 and max 255
+Test case generation completed for test ID 66 w/ min: 0 and max 255
+Test case generation completed for test ID 67 w/ min: 0 and max 255
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_or
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_or ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 127 and max 255
+Test case generation completed for test ID 2 w/ min: 22 and max 255
+Test case generation completed for test ID 3 w/ min: 17 and max 255
+Test case generation completed for test ID 4 w/ min: 6 and max 255
+Test case generation completed for test ID 5 w/ min: 3 and max 255
+Test case generation completed for test ID 6 w/ min: 0 and max 255
+Test case generation completed for test ID 7 w/ min: 1 and max 255
+Test case generation completed for test ID 8 w/ min: 27 and max 255
+Test case generation completed for test ID 9 w/ min: 31 and max 255
+Test case generation completed for test ID 10 w/ min: 15 and max 255
+Test case generation completed for test ID 11 w/ min: 3 and max 255
+Test case generation completed for test ID 12 w/ min: 7 and max 255
+Test case generation completed for test ID 13 w/ min: 1 and max 255
+Test case generation completed for test ID 14 w/ min: 0 and max 255
+Test case generation completed for test ID 15 w/ min: 74 and max 254
+Test case generation completed for test ID 16 w/ min: 14 and max 255
+Test case generation completed for test ID 17 w/ min: 2 and max 255
+Test case generation completed for test ID 18 w/ min: 4 and max 255
+Test case generation completed for test ID 19 w/ min: 5 and max 255
+Test case generation completed for test ID 20 w/ min: 2 and max 255
+Test case generation completed for test ID 21 w/ min: 3 and max 255
+Test case generation completed for test ID 22 w/ min: 5 and max 255
+Test case generation completed for test ID 23 w/ min: 7 and max 255
+Test case generation completed for test ID 24 w/ min: 28159 and max 65279
+Test case generation completed for test ID 25 w/ min: 8185 and max 65533
+Test case generation completed for test ID 26 w/ min: 2939 and max 65535
+Test case generation completed for test ID 27 w/ min: 2047 and max 65535
+Test case generation completed for test ID 28 w/ min: 1790 and max 65535
+Test case generation completed for test ID 29 w/ min: 446 and max 65535
+Test case generation completed for test ID 30 w/ min: 151 and max 65535
+Test case generation completed for test ID 31 w/ min: 20439 and max 65503
+Test case generation completed for test ID 32 w/ min: 5951 and max 65535
+Test case generation completed for test ID 33 w/ min: 5835 and max 65535
+Test case generation completed for test ID 34 w/ min: 1855 and max 65535
+Test case generation completed for test ID 35 w/ min: 491 and max 65535
+Test case generation completed for test ID 36 w/ min: 679 and max 65535
+Test case generation completed for test ID 37 w/ min: 733 and max 65535
+Test case generation completed for test ID 38 w/ min: 28543 and max 63159
+Test case generation completed for test ID 39 w/ min: 12271 and max 65534
+Test case generation completed for test ID 40 w/ min: 495 and max 65535
+Test case generation completed for test ID 41 w/ min: 1499 and max 65535
+Test case generation completed for test ID 42 w/ min: 422 and max 65535
+Test case generation completed for test ID 43 w/ min: 55 and max 65535
+Test case generation completed for test ID 44 w/ min: 366 and max 65535
+Test case generation completed for test ID 45 w/ min: 1311 and max 65535
+Test case generation completed for test ID 46 w/ min: 830 and max 65535
+Test case generation completed for test ID 47 w/ min: -69 and max 125
+Test case generation completed for test ID 48 w/ min: -99 and max 127
+Test case generation completed for test ID 49 w/ min: -122 and max 127
+Test case generation completed for test ID 50 w/ min: -126 and max 127
+Test case generation completed for test ID 51 w/ min: -127 and max 127
+Test case generation completed for test ID 52 w/ min: -126 and max 127
+Test case generation completed for test ID 53 w/ min: -127 and max 127
+Test case generation completed for test ID 54 w/ min: -86 and max 119
+Test case generation completed for test ID 55 w/ min: -117 and max 126
+Test case generation completed for test ID 56 w/ min: -111 and max 127
+Test case generation completed for test ID 57 w/ min: -125 and max 127
+Test case generation completed for test ID 58 w/ min: -122 and max 127
+Test case generation completed for test ID 59 w/ min: -127 and max 127
+Test case generation completed for test ID 60 w/ min: -127 and max 127
+Test case generation completed for test ID 61 w/ min: -83 and max 123
+Test case generation completed for test ID 62 w/ min: -113 and max 127
+Test case generation completed for test ID 63 w/ min: -124 and max 127
+Test case generation completed for test ID 64 w/ min: -125 and max 127
+Test case generation completed for test ID 65 w/ min: -127 and max 127
+Test case generation completed for test ID 66 w/ min: -127 and max 127
+Test case generation completed for test ID 67 w/ min: -127 and max 127
+Test case generation completed for test ID 68 w/ min: -123 and max 127
+Test case generation completed for test ID 69 w/ min: -122 and max 127
+Test case generation completed for test ID 70 w/ min: -16641 and max 32727
+Test case generation completed for test ID 71 w/ min: -28673 and max 32759
+Test case generation completed for test ID 72 w/ min: -31881 and max 32767
+Test case generation completed for test ID 73 w/ min: -29334 and max 32767
+Test case generation completed for test ID 74 w/ min: -32001 and max 32767
+Test case generation completed for test ID 75 w/ min: -32257 and max 32767
+Test case generation completed for test ID 76 w/ min: -32673 and max 32767
+Test case generation completed for test ID 77 w/ min: -28674 and max 30683
+Test case generation completed for test ID 78 w/ min: -30739 and max 32763
+Test case generation completed for test ID 79 w/ min: -31873 and max 32765
+Test case generation completed for test ID 80 w/ min: -29825 and max 32767
+Test case generation completed for test ID 81 w/ min: -32277 and max 32767
+Test case generation completed for test ID 82 w/ min: -32625 and max 32767
+Test case generation completed for test ID 83 w/ min: -32645 and max 32767
+Test case generation completed for test ID 84 w/ min: -26756 and max 26756
+Test case generation completed for test ID 85 w/ min: -29157 and max 32759
+Test case generation completed for test ID 86 w/ min: -31365 and max 32767
+Test case generation completed for test ID 87 w/ min: -31235 and max 32767
+Test case generation completed for test ID 88 w/ min: -31810 and max 32767
+Test case generation completed for test ID 89 w/ min: -32515 and max 32767
+Test case generation completed for test ID 90 w/ min: -32643 and max 32767
+Test case generation completed for test ID 91 w/ min: -30738 and max 32767
+Test case generation completed for test ID 92 w/ min: -31096 and max 32767
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_xor
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_xor ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 14 and max 246
+Test case generation completed for test ID 2 w/ min: 2 and max 243
+Test case generation completed for test ID 3 w/ min: 3 and max 254
+Test case generation completed for test ID 4 w/ min: 0 and max 255
+Test case generation completed for test ID 5 w/ min: 0 and max 255
+Test case generation completed for test ID 6 w/ min: 0 and max 255
+Test case generation completed for test ID 7 w/ min: 0 and max 255
+Test case generation completed for test ID 8 w/ min: 15 and max 231
+Test case generation completed for test ID 9 w/ min: 0 and max 253
+Test case generation completed for test ID 10 w/ min: 0 and max 253
+Test case generation completed for test ID 11 w/ min: 0 and max 255
+Test case generation completed for test ID 12 w/ min: 0 and max 255
+Test case generation completed for test ID 13 w/ min: 0 and max 255
+Test case generation completed for test ID 14 w/ min: 0 and max 255
+Test case generation completed for test ID 15 w/ min: 10 and max 252
+Test case generation completed for test ID 16 w/ min: 3 and max 254
+Test case generation completed for test ID 17 w/ min: 0 and max 255
+Test case generation completed for test ID 18 w/ min: 0 and max 255
+Test case generation completed for test ID 19 w/ min: 0 and max 255
+Test case generation completed for test ID 20 w/ min: 0 and max 255
+Test case generation completed for test ID 21 w/ min: 0 and max 255
+Test case generation completed for test ID 22 w/ min: 0 and max 255
+Test case generation completed for test ID 23 w/ min: 0 and max 255
+Test case generation completed for test ID 24 w/ min: 1884 and max 58624
+Test case generation completed for test ID 25 w/ min: 547 and max 64669
+Test case generation completed for test ID 26 w/ min: 122 and max 65024
+Test case generation completed for test ID 27 w/ min: 160 and max 65400
+Test case generation completed for test ID 28 w/ min: 8 and max 65517
+Test case generation completed for test ID 29 w/ min: 0 and max 65534
+Test case generation completed for test ID 30 w/ min: 0 and max 65535
+Test case generation completed for test ID 31 w/ min: 9071 and max 62198
+Test case generation completed for test ID 32 w/ min: 2187 and max 63264
+Test case generation completed for test ID 33 w/ min: 162 and max 64985
+Test case generation completed for test ID 34 w/ min: 128 and max 65419
+Test case generation completed for test ID 35 w/ min: 47 and max 65525
+Test case generation completed for test ID 36 w/ min: 0 and max 65526
+Test case generation completed for test ID 37 w/ min: 1 and max 65534
+Test case generation completed for test ID 38 w/ min: 21474 and max 45919
+Test case generation completed for test ID 39 w/ min: 106 and max 64952
+Test case generation completed for test ID 40 w/ min: 49 and max 65509
+Test case generation completed for test ID 41 w/ min: 58 and max 65501
+Test case generation completed for test ID 42 w/ min: 0 and max 65500
+Test case generation completed for test ID 43 w/ min: 0 and max 65533
+Test case generation completed for test ID 44 w/ min: 8 and max 65535
+Test case generation completed for test ID 45 w/ min: 30 and max 65527
+Test case generation completed for test ID 46 w/ min: 10 and max 65474
+Test case generation completed for test ID 47 w/ min: -125 and max 113
+Test case generation completed for test ID 48 w/ min: -122 and max 127
+Test case generation completed for test ID 49 w/ min: -128 and max 127
+Test case generation completed for test ID 50 w/ min: -128 and max 127
+Test case generation completed for test ID 51 w/ min: -128 and max 127
+Test case generation completed for test ID 52 w/ min: -128 and max 127
+Test case generation completed for test ID 53 w/ min: -128 and max 127
+Test case generation completed for test ID 54 w/ min: -81 and max 111
+Test case generation completed for test ID 55 w/ min: -117 and max 123
+Test case generation completed for test ID 56 w/ min: -128 and max 127
+Test case generation completed for test ID 57 w/ min: -128 and max 127
+Test case generation completed for test ID 58 w/ min: -128 and max 127
+Test case generation completed for test ID 59 w/ min: -128 and max 127
+Test case generation completed for test ID 60 w/ min: -128 and max 127
+Test case generation completed for test ID 61 w/ min: -91 and max 94
+Test case generation completed for test ID 62 w/ min: -121 and max 123
+Test case generation completed for test ID 63 w/ min: -128 and max 127
+Test case generation completed for test ID 64 w/ min: -128 and max 127
+Test case generation completed for test ID 65 w/ min: -128 and max 127
+Test case generation completed for test ID 66 w/ min: -128 and max 127
+Test case generation completed for test ID 67 w/ min: -128 and max 127
+Test case generation completed for test ID 68 w/ min: -128 and max 127
+Test case generation completed for test ID 69 w/ min: -128 and max 127
+Test case generation completed for test ID 70 w/ min: -31361 and max 13687
+Test case generation completed for test ID 71 w/ min: -31317 and max 32149
+Test case generation completed for test ID 72 w/ min: -32763 and max 32583
+Test case generation completed for test ID 73 w/ min: -32744 and max 32616
+Test case generation completed for test ID 74 w/ min: -32745 and max 32732
+Test case generation completed for test ID 75 w/ min: -32766 and max 32766
+Test case generation completed for test ID 76 w/ min: -32768 and max 32767
+Test case generation completed for test ID 77 w/ min: -30110 and max 27277
+Test case generation completed for test ID 78 w/ min: -31884 and max 32046
+Test case generation completed for test ID 79 w/ min: -32760 and max 32575
+Test case generation completed for test ID 80 w/ min: -32662 and max 32629
+Test case generation completed for test ID 81 w/ min: -32725 and max 32758
+Test case generation completed for test ID 82 w/ min: -32763 and max 32764
+Test case generation completed for test ID 83 w/ min: -32767 and max 32767
+Test case generation completed for test ID 84 w/ min: -22064 and max 32402
+Test case generation completed for test ID 85 w/ min: -32027 and max 32403
+Test case generation completed for test ID 86 w/ min: -32751 and max 32715
+Test case generation completed for test ID 87 w/ min: -32692 and max 32762
+Test case generation completed for test ID 88 w/ min: -32767 and max 32750
+Test case generation completed for test ID 89 w/ min: -32767 and max 32767
+Test case generation completed for test ID 90 w/ min: -32764 and max 32745
+Test case generation completed for test ID 91 w/ min: -32720 and max 32708
+Test case generation completed for test ID 92 w/ min: -32537 and max 32738
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_tableLookup
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_tableLookup ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 237
+Test case generation completed for test ID 2 w/ min: 28 and max 246
+Test case generation completed for test ID 3 w/ min: 7 and max 242
+Test case generation completed for test ID 4 w/ min: 33 and max 242
+Test case generation completed for test ID 5 w/ min: 1 and max 252
+Test case generation completed for test ID 6 w/ min: 7 and max 254
+Test case generation completed for test ID 7 w/ min: 2 and max 250
+Test case generation completed for test ID 8 w/ min: 0 and max 249
+Test case generation completed for test ID 9 w/ min: 0 and max 254
+Test case generation completed for test ID 10 w/ min: 0 and max 252
+Test case generation completed for test ID 11 w/ min: 7 and max 248
+Test case generation completed for test ID 12 w/ min: 33 and max 242
+Test case generation completed for test ID 13 w/ min: 1 and max 240
+Test case generation completed for test ID 14 w/ min: 4 and max 254
+Test case generation completed for test ID 15 w/ min: 7 and max 248
+Test case generation completed for test ID 16 w/ min: 0 and max 253
+Test case generation completed for test ID 17 w/ min: 0 and max 254
+Test case generation completed for test ID 18 w/ min: 0 and max 245
+Test case generation completed for test ID 19 w/ min: 0 and max 254
+Test case generation completed for test ID 20 w/ min: 0 and max 254
+Test case generation completed for test ID 21 w/ min: -90 and max 121
+Test case generation completed for test ID 22 w/ min: -91 and max 111
+Test case generation completed for test ID 23 w/ min: -121 and max 123
+Test case generation completed for test ID 24 w/ min: -110 and max 123
+Test case generation completed for test ID 25 w/ min: -126 and max 120
+Test case generation completed for test ID 26 w/ min: -127 and max 122
+Test case generation completed for test ID 27 w/ min: -126 and max 122
+Test case generation completed for test ID 28 w/ min: -124 and max 123
+Test case generation completed for test ID 29 w/ min: -122 and max 126
+Test case generation completed for test ID 30 w/ min: -122 and max 125
+Test case generation completed for test ID 31 w/ min: -117 and max 106
+Test case generation completed for test ID 32 w/ min: -72 and max 125
+Test case generation completed for test ID 33 w/ min: -123 and max 123
+Test case generation completed for test ID 34 w/ min: -121 and max 109
+Test case generation completed for test ID 35 w/ min: -123 and max 117
+Test case generation completed for test ID 36 w/ min: -117 and max 125
+Test case generation completed for test ID 37 w/ min: -126 and max 126
+Test case generation completed for test ID 38 w/ min: -126 and max 122
+Test case generation completed for test ID 39 w/ min: -126 and max 125
+Test case generation completed for test ID 40 w/ min: -127 and max 126
+Test case generation completed for test ID 41 w/ min: 8 and max 62098
+Test case generation completed for test ID 42 w/ min: 8250 and max 64330
+Test case generation completed for test ID 43 w/ min: 4929 and max 65238
+Test case generation completed for test ID 44 w/ min: 2038 and max 63516
+Test case generation completed for test ID 45 w/ min: 980 and max 65189
+Test case generation completed for test ID 46 w/ min: 4551 and max 60795
+Test case generation completed for test ID 47 w/ min: 32 and max 64882
+Test case generation completed for test ID 48 w/ min: 683 and max 65085
+Test case generation completed for test ID 49 w/ min: 27 and max 65247
+Test case generation completed for test ID 50 w/ min: 20 and max 65491
+Test case generation completed for test ID 51 w/ min: 9584 and max 65271
+Test case generation completed for test ID 52 w/ min: 1779 and max 61370
+Test case generation completed for test ID 53 w/ min: 2111 and max 64904
+Test case generation completed for test ID 54 w/ min: 1337 and max 65025
+Test case generation completed for test ID 55 w/ min: 205 and max 64562
+Test case generation completed for test ID 56 w/ min: 667 and max 64473
+Test case generation completed for test ID 57 w/ min: 296 and max 65166
+Test case generation completed for test ID 58 w/ min: 293 and max 65413
+Test case generation completed for test ID 59 w/ min: 276 and max 65533
+Test case generation completed for test ID 60 w/ min: 21 and max 65412
+Test case generation completed for test ID 61 w/ min: -31521 and max 31061
+Test case generation completed for test ID 62 w/ min: -26774 and max 30660
+Test case generation completed for test ID 63 w/ min: -32541 and max 32447
+Test case generation completed for test ID 64 w/ min: -29522 and max 32569
+Test case generation completed for test ID 65 w/ min: -30259 and max 32187
+Test case generation completed for test ID 66 w/ min: -32734 and max 32465
+Test case generation completed for test ID 67 w/ min: -32049 and max 32388
+Test case generation completed for test ID 68 w/ min: -32397 and max 32424
+Test case generation completed for test ID 69 w/ min: -32077 and max 32373
+Test case generation completed for test ID 70 w/ min: -31971 and max 32644
+Test case generation completed for test ID 71 w/ min: -28325 and max 20504
+Test case generation completed for test ID 72 w/ min: -25938 and max 23163
+Test case generation completed for test ID 73 w/ min: -30934 and max 30029
+Test case generation completed for test ID 74 w/ min: -30867 and max 30016
+Test case generation completed for test ID 75 w/ min: -32158 and max 32708
+Test case generation completed for test ID 76 w/ min: -32734 and max 32745
+Test case generation completed for test ID 77 w/ min: -32403 and max 32764
+Test case generation completed for test ID 78 w/ min: -32756 and max 31792
+Test case generation completed for test ID 79 w/ min: -32635 and max 32647
+Test case generation completed for test ID 80 w/ min: -32241 and max 32759
+Test case generation completed for test ID 81 w/ min: -32680 and max 32740
+Test case generation completed for test ID 82 w/ min: 0 and max 219
+Test case generation completed for test ID 83 w/ min: -127 and max 97
+Test case generation completed for test ID 84 w/ min: 104 and max 64916
+Test case generation completed for test ID 85 w/ min: -31865 and max 30063
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_dilate
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_dilate ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 233 and max 252
+Test case generation completed for test ID 2 w/ min: 122 and max 252
+Test case generation completed for test ID 3 w/ min: 57 and max 254
+Test case generation completed for test ID 4 w/ min: 106 and max 254
+Test case generation completed for test ID 5 w/ min: 98 and max 254
+Test case generation completed for test ID 6 w/ min: 78 and max 254
+Test case generation completed for test ID 7 w/ min: 78 and max 254
+Test case generation completed for test ID 8 w/ min: 98 and max 254
+Test case generation completed for test ID 9 w/ min: 80 and max 254
+Test case generation completed for test ID 10 w/ min: 117 and max 254
+Test case generation completed for test ID 11 w/ min: 113 and max 226
+Test case generation completed for test ID 12 w/ min: 252 and max 254
+Test case generation completed for test ID 13 w/ min: 250 and max 254
+Test case generation completed for test ID 14 w/ min: 254 and max 254
+Test case generation completed for test ID 15 w/ min: 253 and max 254
+Test case generation completed for test ID 16 w/ min: 224 and max 254
+Test case generation completed for test ID 17 w/ min: 250 and max 254
+Test case generation completed for test ID 18 w/ min: 254 and max 254
+Test case generation completed for test ID 19 w/ min: 254 and max 254
+Test case generation completed for test ID 20 w/ min: 254 and max 254
+Test case generation completed for test ID 21 w/ min: 45746 and max 64231
+Test case generation completed for test ID 22 w/ min: 17685 and max 65383
+Test case generation completed for test ID 23 w/ min: 20229 and max 65452
+Test case generation completed for test ID 24 w/ min: 22611 and max 65532
+Test case generation completed for test ID 25 w/ min: 18983 and max 65525
+Test case generation completed for test ID 26 w/ min: 35195 and max 65426
+Test case generation completed for test ID 27 w/ min: 30254 and max 65501
+Test case generation completed for test ID 28 w/ min: 22776 and max 65506
+Test case generation completed for test ID 29 w/ min: 24817 and max 65530
+Test case generation completed for test ID 30 w/ min: 25474 and max 65519
+Test case generation completed for test ID 31 w/ min: 36832 and max 60232
+Test case generation completed for test ID 32 w/ min: 65012 and max 65288
+Test case generation completed for test ID 33 w/ min: 65173 and max 65522
+Test case generation completed for test ID 34 w/ min: 65348 and max 65525
+Test case generation completed for test ID 35 w/ min: 65204 and max 65532
+Test case generation completed for test ID 36 w/ min: 56655 and max 65497
+Test case generation completed for test ID 37 w/ min: 64623 and max 65526
+Test case generation completed for test ID 38 w/ min: 65498 and max 65524
+Test case generation completed for test ID 39 w/ min: 65527 and max 65527
+Test case generation completed for test ID 40 w/ min: 65329 and max 65530
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_thresholdRange
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_thresholdRange ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 1
+Test case generation completed for test ID 2 w/ min: 3 and max 5
+Skipping test case generation for test ID 3 as tesType is RANDOM
+Skipping test case generation for test ID 4 as tesType is RANDOM
+Skipping test case generation for test ID 5 as tesType is RANDOM
+Test case generation completed for test ID 6 w/ min: 15 and max 25
+Test case generation completed for test ID 7 w/ min: 18 and max 30
+Test case generation completed for test ID 8 w/ min: 21 and max 35
+Test case generation completed for test ID 9 w/ min: 24 and max 40
+Test case generation completed for test ID 10 w/ min: 27 and max 45
+Test case generation completed for test ID 11 w/ min: 30 and max 50
+Test case generation completed for test ID 12 w/ min: 33 and max 55
+Test case generation completed for test ID 13 w/ min: 36 and max 60
+Test case generation completed for test ID 14 w/ min: 39 and max 65
+Test case generation completed for test ID 15 w/ min: 42 and max 70
+Test case generation completed for test ID 16 w/ min: 45 and max 75
+Test case generation completed for test ID 17 w/ min: 48 and max 48
+Test case generation completed for test ID 18 w/ min: 51 and max 85
+Skipping test case generation for test ID 19 as tesType is RANDOM
+Skipping test case generation for test ID 20 as tesType is RANDOM
+Skipping test case generation for test ID 21 as tesType is RANDOM
+Skipping test case generation for test ID 22 as tesType is RANDOM
+Skipping test case generation for test ID 23 as tesType is RANDOM
+Skipping test case generation for test ID 24 as tesType is RANDOM
+Test case generation completed for test ID 25 w/ min: 72 and max 72
+Test case generation completed for test ID 26 w/ min: 75 and max 125
+Test case generation completed for test ID 27 w/ min: 3 and max 3
+Test case generation completed for test ID 28 w/ min: 6 and max 10
+Test case generation completed for test ID 29 w/ min: 9 and max 15
+Skipping test case generation for test ID 30 as tesType is RANDOM
+Skipping test case generation for test ID 31 as tesType is RANDOM
+Test case generation completed for test ID 32 w/ min: 18 and max 30
+Test case generation completed for test ID 33 w/ min: 21 and max 35
+Test case generation completed for test ID 34 w/ min: 24 and max 40
+Test case generation completed for test ID 35 w/ min: 27 and max 45
+Test case generation completed for test ID 36 w/ min: 30 and max 50
+Test case generation completed for test ID 37 w/ min: 33 and max 55
+Skipping test case generation for test ID 38 as tesType is RANDOM
+Skipping test case generation for test ID 39 as tesType is RANDOM
+Test case generation completed for test ID 40 w/ min: 42 and max 70
+Test case generation completed for test ID 41 w/ min: 45 and max 75
+Test case generation completed for test ID 42 w/ min: 48 and max 80
+Test case generation completed for test ID 43 w/ min: 51 and max 85
+Test case generation completed for test ID 44 w/ min: 54 and max 90
+Test case generation completed for test ID 45 w/ min: 57 and max 95
+Test case generation completed for test ID 46 w/ min: 60 and max 100
+Test case generation completed for test ID 47 w/ min: 63 and max 105
+Test case generation completed for test ID 48 w/ min: 66 and max 110
+Test case generation completed for test ID 49 w/ min: 69 and max 69
+Test case generation completed for test ID 50 w/ min: 72 and max 72
+Test case generation completed for test ID 51 w/ min: 75 and max 75
+Test case generation completed for test ID 52 w/ min: 3 and max 5
+Skipping test case generation for test ID 53 as tesType is RANDOM
+Skipping test case generation for test ID 54 as tesType is RANDOM
+Test case generation completed for test ID 55 w/ min: 12 and max 20
+Test case generation completed for test ID 56 w/ min: 15 and max 25
+Test case generation completed for test ID 57 w/ min: 18 and max 18
+Test case generation completed for test ID 58 w/ min: 21 and max 35
+Test case generation completed for test ID 59 w/ min: 24 and max 24
+Test case generation completed for test ID 60 w/ min: 27 and max 45
+Test case generation completed for test ID 61 w/ min: 30 and max 50
+Test case generation completed for test ID 62 w/ min: 33 and max 33
+Test case generation completed for test ID 63 w/ min: 36 and max 36
+Test case generation completed for test ID 64 w/ min: 39 and max 65
+Test case generation completed for test ID 65 w/ min: 42 and max 70
+Test case generation completed for test ID 66 w/ min: 45 and max 75
+Test case generation completed for test ID 67 w/ min: 48 and max 80
+Test case generation completed for test ID 68 w/ min: 51 and max 85
+Test case generation completed for test ID 69 w/ min: 54 and max 90
+Test case generation completed for test ID 70 w/ min: 57 and max 95
+Test case generation completed for test ID 71 w/ min: 60 and max 100
+Test case generation completed for test ID 72 w/ min: 63 and max 105
+Test case generation completed for test ID 73 w/ min: 66 and max 110
+Test case generation completed for test ID 74 w/ min: 69 and max 115
+Skipping test case generation for test ID 75 as tesType is RANDOM
+Skipping test case generation for test ID 76 as tesType is RANDOM
+Test case generation completed for test ID 77 w/ min: 3 and max 5
+Test case generation completed for test ID 78 w/ min: 6 and max 10
+Test case generation completed for test ID 79 w/ min: 9 and max 15
+Test case generation completed for test ID 80 w/ min: 12 and max 20
+Test case generation completed for test ID 81 w/ min: 15 and max 15
+Test case generation completed for test ID 82 w/ min: 18 and max 18
+Test case generation completed for test ID 83 w/ min: 21 and max 35
+Skipping test case generation for test ID 84 as tesType is RANDOM
+Skipping test case generation for test ID 85 as tesType is RANDOM
+Test case generation completed for test ID 86 w/ min: 30 and max 50
+Test case generation completed for test ID 87 w/ min: 33 and max 33
+Test case generation completed for test ID 88 w/ min: 36 and max 36
+Test case generation completed for test ID 89 w/ min: 39 and max 39
+Skipping test case generation for test ID 90 as tesType is RANDOM
+Skipping test case generation for test ID 91 as tesType is RANDOM
+Test case generation completed for test ID 92 w/ min: 48 and max 80
+Test case generation completed for test ID 93 w/ min: 51 and max 85
+Test case generation completed for test ID 94 w/ min: 54 and max 90
+Test case generation completed for test ID 95 w/ min: 57 and max 95
+Test case generation completed for test ID 96 w/ min: 60 and max 100
+Test case generation completed for test ID 97 w/ min: 63 and max 105
+Test case generation completed for test ID 98 w/ min: 66 and max 110
+Test case generation completed for test ID 99 w/ min: 69 and max 115
+Skipping test case generation for test ID 100 as tesType is RANDOM
+Skipping test case generation for test ID 101 as tesType is RANDOM
+Test case generation completed for test ID 102 w/ min: 0 and max 60
+Skipping test case generation for test ID 103 as tesType is RANDOM
+Test case generation completed for test ID 104 w/ min: 0 and max 65
+Skipping test case generation for test ID 105 as tesType is RANDOM
+Skipping test case generation for test ID 106 as tesType is RANDOM
+Skipping test case generation for test ID 107 as tesType is RANDOM
+Skipping test case generation for test ID 108 as tesType is RANDOM
+Idat file generation completed
+~/vxlib/cmake
+
+
+##############################################################
+
+ Generating test case headers for VXLIB_gaussian
+##############################################################
+
+~/vxlib/test/VXLIB_idat_gen/VXLIB_gaussian ~/vxlib/cmake
+Test case generation completed for test ID 1 w/ min: 0 and max 0
+Test case generation completed for test ID 2 w/ min: 0 and max 0
+Test case generation completed for test ID 3 w/ min: 0 and max 0
+Test case generation completed for test ID 4 w/ min: 0 and max 0
+Test case generation completed for test ID 5 w/ min: 0 and max 0
+Test case generation completed for test ID 6 w/ min: 0 and max 0
+Test case generation completed for test ID 7 w/ min: 0 and max 0
+Test case generation completed for test ID 8 w/ min: 0 and max 0
+Test case generation completed for test ID 9 w/ min: 0 and max 0
+Test case generation completed for test ID 10 w/ min: 0 and max 0
+Test case generation completed for test ID 11 w/ min: 0 and max 0
+Test case generation completed for test ID 12 w/ min: 0 and max 0
+Test case generation completed for test ID 13 w/ min: 76 and max 167
+Test case generation completed for test ID 14 w/ min: 63 and max 186
+Test case generation completed for test ID 15 w/ min: 60 and max 194
+Test case generation completed for test ID 16 w/ min: 52 and max 206
+Test case generation completed for test ID 17 w/ min: 49 and max 219
+Test case generation completed for test ID 18 w/ min: 0 and max 1
+Test case generation completed for test ID 19 w/ min: 65 and max 192
+Test case generation completed for test ID 20 w/ min: 66 and max 191
+Test case generation completed for test ID 21 w/ min: 209 and max 209
+Test case generation completed for test ID 22 w/ min: 127 and max 127
+Test case generation completed for test ID 23 w/ min: 108 and max 108
+Test case generation completed for test ID 24 w/ min: 2 and max 4
+Idat file generation completed
+~/vxlib/cmake
+
