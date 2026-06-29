@@ -299,6 +299,12 @@ VXLIB_STATUS
 VXLIB_histogram_exec(VXLIB_kernelHandle handle, void *restrict pIn, void *restrict pOut, void *restrict pTemp);
 #endif // if !defined(__C7504__) && !defined(__C7524__)
 
+/**
+ *  @brief   Returns cycle estimates for VXLIB_histogram_perfEst.
+ *  @param [in]  handle     :  Active handle to the kernel
+ *  @param [out] archCycles :  Arch compute cycles obtained from asm.
+ *  @param [out] estCycles  :  Estimated cycles including overhead.
+ */
 void VXLIB_histogram_perfEst(VXLIB_kernelHandle handle, size_t *archCycles, size_t *estCycles);
 
 /** @} */

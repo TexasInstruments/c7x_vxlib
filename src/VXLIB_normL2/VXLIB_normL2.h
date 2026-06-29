@@ -197,7 +197,6 @@ VXLIB_normL2_exec(VXLIB_kernelHandle handle, void *restrict pIn0, void *restrict
  *
  *  @param [out] estCycles    :  Estimated cycles including overhead.
  *
- *  @return      None.
  *
  *  @par Assumptions:
  *    - The function @ref VXLIB_normL2_init is called prior to this function call

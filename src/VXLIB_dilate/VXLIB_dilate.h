@@ -55,7 +55,7 @@ typedef struct {
 
    /** @brief Width and height of filter     */
    uint32_t filterWidth;
-   uint32_t filterHeight;
+   uint32_t filterHeight; /**< Filter height in rows */
 
 } VXLIB_dilate_InitArgs;
 
@@ -173,6 +173,12 @@ VXLIB_dilate_exec_checkParams(VXLIB_kernelHandle handle, const void *restrict pI
 VXLIB_STATUS
 VXLIB_dilate_exec(VXLIB_kernelHandle handle, void *restrict pIn, void *restrict pOut);
 
+/**
+ *  @brief   Returns cycle estimates for VXLIB_dilate_perfEst.
+ *  @param [in]  handle     :  Active handle to the kernel
+ *  @param [out] archCycles :  Arch compute cycles obtained from asm.
+ *  @param [out] estCycles  :  Estimated cycles including overhead.
+ */
 void VXLIB_dilate_perfEst(VXLIB_kernelHandle handle, size_t *archCycles, size_t *estCycles);
 
 /** @} */

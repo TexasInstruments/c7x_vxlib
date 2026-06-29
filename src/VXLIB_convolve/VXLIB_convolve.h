@@ -73,9 +73,9 @@ typedef struct {
 
    /** @brief Padding options     */
    int32_t padLeft;
-   int32_t padRight;
-   int32_t padTop;
-   int32_t padBottom;
+   int32_t padRight; /**< Right-side padding in pixels */
+   int32_t padTop; /**< Top padding in rows */
+   int32_t padBottom; /**< Bottom padding in rows */
 
 } VXLIB_convolve_InitArgs;
 
@@ -204,6 +204,12 @@ VXLIB_convolve_exec_checkParams(VXLIB_kernelHandle handle,
 VXLIB_STATUS
 VXLIB_convolve_exec(VXLIB_kernelHandle handle, void *restrict pIn, void *restrict pFilter, void *restrict pOut);
 
+/**
+ *  @brief   Returns cycle estimates for VXLIB_convolve_perfEst.
+ *  @param [in]  handle     :  Active handle to the kernel
+ *  @param [out] archCycles :  Arch compute cycles obtained from asm.
+ *  @param [out] estCycles  :  Estimated cycles including overhead.
+ */
 void VXLIB_convolve_perfEst(VXLIB_kernelHandle handle, size_t *archCycles, size_t *estCycles);
 
 /** @} */

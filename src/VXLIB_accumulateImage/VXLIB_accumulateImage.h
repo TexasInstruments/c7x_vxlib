@@ -171,6 +171,12 @@ VXLIB_accumulateImage_exec_checkParams(VXLIB_kernelHandle handle, const void *re
 VXLIB_STATUS
 VXLIB_accumulateImage_exec(VXLIB_kernelHandle handle, void *restrict pIn, void *restrict pOut);
 
+/**
+ *  @brief   Returns cycle estimates for VXLIB_accumulateImage_perfEst.
+ *  @param [in]  handle     :  Active handle to the kernel
+ *  @param [out] archCycles :  Arch compute cycles obtained from asm.
+ *  @param [out] estCycles  :  Estimated cycles including overhead.
+ */
 void VXLIB_accumulateImage_perfEst(VXLIB_kernelHandle handle, size_t *archCycles, size_t *estCycles);
 
 /** @} */

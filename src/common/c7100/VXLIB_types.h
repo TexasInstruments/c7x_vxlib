@@ -24,7 +24,7 @@ extern "C" {
  * \details
  */
 
-/* @{ */
+/** @{ */
 
 #ifdef __cplusplus
 }
