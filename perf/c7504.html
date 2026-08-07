@@ -1,0 +1,1670 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="c7524.html">
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>C7504 (AM62D) - VXLIB Documentation</title>
+      
+    
+    
+      
+        
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx_immaterial_theme.a027cd878cd91b31c.min.css?v=2be211a8" />
+        <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+        <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+        <link rel="stylesheet" type="text/css" href="../_static/css/theme_overrides.css?v=9b53c505" />
+        <link rel="stylesheet" type="text/css" href="../_static/css/immaterial_overrides.css?v=82266e3c" />
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vxlib-absdiff" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="VXLIB Documentation" class="md-header__button md-logo" aria-label="VXLIB Documentation" data-md-component="logo">
+      <img src="../_static/ti_logo_mono.svg" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            <a href="../index.html" style="color:inherit;text-decoration:none">VXLIB Documentation</a>
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C7504 (AM62D)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TexasInstruments/c7x_vxlib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    c7x_vxlib
+    <span class="ti-branch">main</span>
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="VXLIB Documentation" class="md-nav__button md-logo" aria-label="VXLIB Documentation" data-md-component="logo">
+      <img src="../_static/ti_logo_mono.svg" alt="logo">
+    </a>
+    VXLIB Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TexasInstruments/c7x_vxlib" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    c7x_vxlib
+    <span class="ti-branch">main</span>
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    <span>Getting Started</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository_layout.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h6v4H3zm12 7h6v4h-6zm0 7h6v4h-6zm-2-4H7v5h6v2H5V9h2v2h6z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    <span>Repository Layout</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/index.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    <span>API Reference</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    <span>Performance</span>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            <span>Performance</span>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    <span>C7504 <wbr>(AM62D)</span>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>C7504 <wbr>(AM62D)</span>
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-absdiff" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>abs<wbr>Diff</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-accumulateimage" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>accumulate<wbr>Image</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-accumulatesquareimage" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>accumulate<wbr>Square<wbr>Image</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-accumulateweightimage" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>accumulate<wbr>Weight<wbr>Image</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-add" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>add</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-addsquare" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>add<wbr>Square</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-addweight" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>add<wbr>Weight</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-and" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>and</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-box" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>box</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-convertdepth" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>convert<wbr>Depth</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-multiply" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>multiply</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-xor" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>xor</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-thresholdbinary" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>threshold<wbr>Binary</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-tablelookup" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>table<wbr>Lookup</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-subtract" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>subtract</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-or" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>or</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-not" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>not</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-norml1" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>norm<wbr>L1</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-norml2" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>norm<wbr>L2</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-minmaxloc" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>min<wbr>Max<wbr>Loc</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-thresholdrange" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>threshold<wbr>Range</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-median" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>median</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-convolve" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>convolve</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-dilate" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>dilate</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-meanstddev" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>mean<wbr>Std<wbr>Dev</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-gaussian" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>gaussian</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-halfscalegaussian" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>half<wbr>Scale<wbr>Gaussian</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-magnitude" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>magnitude</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-histogram" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>histogram</span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c7524.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>C7524 <wbr>(AM275)</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    <span>License</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-absdiff" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>abs<wbr>Diff</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-accumulateimage" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>accumulate<wbr>Image</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-accumulatesquareimage" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>accumulate<wbr>Square<wbr>Image</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-accumulateweightimage" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>accumulate<wbr>Weight<wbr>Image</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-add" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>add</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-addsquare" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>add<wbr>Square</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-addweight" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>add<wbr>Weight</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-and" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>and</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-box" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>box</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-convertdepth" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>convert<wbr>Depth</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-multiply" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>multiply</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-xor" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>xor</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-thresholdbinary" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>threshold<wbr>Binary</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-tablelookup" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>table<wbr>Lookup</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-subtract" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>subtract</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-or" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>or</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-not" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>not</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-norml1" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>norm<wbr>L1</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-norml2" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>norm<wbr>L2</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-minmaxloc" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>min<wbr>Max<wbr>Loc</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-thresholdrange" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>threshold<wbr>Range</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-median" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>median</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-convolve" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>convolve</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-dilate" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>dilate</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-meanstddev" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>mean<wbr>Std<wbr>Dev</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-gaussian" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>gaussian</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-halfscalegaussian" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>half<wbr>Scale<wbr>Gaussian</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-magnitude" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>magnitude</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vxlib-histogram" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>VXLIB_<wbr>histogram</span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                
+                
+                  
+
+
+<h1 id="c7504-am62d">C7504 (AM62D)<a class="headerlink" href="#c7504-am62d" title="Link to this heading">¶</a></h1>
+<h2 id="vxlib-absdiff">VXLIB_absDiff<a class="headerlink" href="#vxlib-absdiff" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>Input0</center></th><th><center>Input1</center></th><th><center>Output</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>StrideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>152</center></td><td><center>0.15</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>247</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>632</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2167</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>186</center></td><td><center>0.18</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>372</center></td><td><center>0.09</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1140</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4212</center></td><td><center>0.06</center></td></tr>
+</table><h2 id="vxlib-accumulateimage">VXLIB_accumulateImage<a class="headerlink" href="#vxlib-accumulateimage" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>Input</center></th><th><center>Output</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>653</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1152</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>176</center></td><td><center>0.17</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>221</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1106</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1125</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>646</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1161</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>178</center></td><td><center>0.17</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1114</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1125</center></td><td><center>0.07</center></td></tr>
+</table><h2 id="vxlib-accumulatesquareimage">VXLIB_accumulateSquareImage<a class="headerlink" href="#vxlib-accumulatesquareimage" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>4214</center></td><td><center>0.26</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>4177</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>4179</center></td><td><center>0.26</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>4177</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>16563</center></td><td><center>0.25</center></td></tr>
+</table><h2 id="vxlib-accumulateweightimage">VXLIB_accumulateWeightImage<a class="headerlink" href="#vxlib-accumulateweightimage" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dTypeOut</center></th><th><center>dTypeAlpha</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>12477</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3162</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>856</center></td><td><center>0.21</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>282</center></td><td><center>0.28</center></td></tr>
+</table><h2 id="vxlib-add">VXLIB_add<a class="headerlink" href="#vxlib-add" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeIn1</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>overFlowPolicy</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>650</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>370</center></td><td><center>0.09</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1125</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>Saturate</center></td><td><center>156</center></td><td><center>0.15</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>338</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>345</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1291</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1116</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>654</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>379</center></td><td><center>0.09</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1125</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>Wrap</center></td><td><center>168</center></td><td><center>0.16</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>217</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>343</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1176</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1115</center></td><td><center>0.07</center></td></tr>
+</table><h2 id="vxlib-addsquare">VXLIB_addSquare<a class="headerlink" href="#vxlib-addsquare" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeIn1</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>shift</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>12</center></td><td><center>2170</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>13</center></td><td><center>2128</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>14</center></td><td><center>2131</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>10</center></td><td><center>2129</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>12</center></td><td><center>8272</center></td><td><center>0.13</center></td></tr>
+</table><h2 id="vxlib-addweight">VXLIB_addWeight<a class="headerlink" href="#vxlib-addweight" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeIn1</center></th><th><center>dTypeOut</center></th><th><center>dTypeAlpha</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>12377</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3161</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>859</center></td><td><center>0.21</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>float</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>284</center></td><td><center>0.28</center></td></tr>
+</table><h2 id="vxlib-and">VXLIB_and<a class="headerlink" href="#vxlib-and" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>109</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>207</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>592</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2273</center></td><td><center>0.03</center></td></tr>
+</table><h2 id="vxlib-box">VXLIB_box<a class="headerlink" href="#vxlib-box" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>filterDim</center></th><th><center>strideIn</center></th><th><center>strideOut</center></th><th><center>padLeft</center></th><th><center>padRight</center></th><th><center>padTop</center></th><th><center>padBottom</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>3</center></td><td><center>32</center></td><td><center>32</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>399</center></td><td><center>0.39</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>3</center></td><td><center>64</center></td><td><center>64</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>764</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>128</center></td><td><center>128</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>2366</center></td><td><center>0.14</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>3</center></td><td><center>256</center></td><td><center>256</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>8684</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>512</center></td><td><center>512</center></td><td><center>3</center></td><td><center>512</center></td><td><center>512</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>33506</center></td><td><center>0.13</center></td></tr>
+</table><h2 id="vxlib-convertdepth">VXLIB_convertDepth<a class="headerlink" href="#vxlib-convertdepth" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>DatatypeIn</center></th><th><center>DatatypeOut</center></th><th><center>Height</center></th><th><center>Width</center></th><th><center>Stride</center></th><th><center>Overflow Policy</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>N/A</center></td><td><center>210</center></td><td><center>0.21</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>N/A</center></td><td><center>381</center></td><td><center>0.09</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>N/A</center></td><td><center>1140</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>N/A</center></td><td><center>4212</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>Wrap</center></td><td><center>221</center></td><td><center>0.22</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>246</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>649</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Wrap</center></td><td><center>2185</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>Saturate</center></td><td><center>279</center></td><td><center>0.27</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>493</center></td><td><center>0.12</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1664</center></td><td><center>0.10</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Saturate</center></td><td><center>6272</center></td><td><center>0.10</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>255</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>889</center></td><td><center>0.22</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>192</center></td><td><center>Saturate</center></td><td><center>3194</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>320</center></td><td><center>Saturate</center></td><td><center>12410</center></td><td><center>0.19</center></td></tr>
+</table><h2 id="vxlib-multiply">VXLIB_multiply<a class="headerlink" href="#vxlib-multiply" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeIn1</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>overFlowPolicy</center></th><th><center>multiplyMode</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>874</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>3422</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>1635</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>32</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>6237</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>3167</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>12376</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>3167</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1/2^n</center></td><td><center>12376</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>1746</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>6370</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>2141</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>32</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>8280</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>3156</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>12372</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>3156</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Integer</center></td><td><center>12372</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>5747</center></td><td><center>0.35</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>22640</center></td><td><center>0.35</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>4201</center></td><td><center>0.26</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>32</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>16490</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>5314</center></td><td><center>0.32</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>20583</center></td><td><center>0.31</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>5264</center></td><td><center>0.32</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>Generic</center></td><td><center>20640</center></td><td><center>0.31</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>630</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>2152</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>1168</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>32</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>4291</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>2666</center></td><td><center>0.16</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>10331</center></td><td><center>0.16</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>2856</center></td><td><center>0.17</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1/2^n</center></td><td><center>10327</center></td><td><center>0.16</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>1770</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>6246</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>2146</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>32</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>8288</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>3164</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>12375</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>3164</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Integer</center></td><td><center>12375</center></td><td><center>0.19</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>4593</center></td><td><center>0.28</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>17043</center></td><td><center>0.26</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>4202</center></td><td><center>0.26</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>32</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>16488</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>5452</center></td><td><center>0.33</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>20670</center></td><td><center>0.32</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>5461</center></td><td><center>0.33</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>Generic</center></td><td><center>20711</center></td><td><center>0.32</center></td></tr>
+</table><h2 id="vxlib-xor">VXLIB_xor<a class="headerlink" href="#vxlib-xor" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>110</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>214</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>592</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2132</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>110</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>208</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>592</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2132</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>246</center></td><td><center>0.24</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>338</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1230</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4182</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>265</center></td><td><center>0.26</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>338</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1107</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4182</center></td><td><center>0.06</center></td></tr>
+</table><h2 id="vxlib-thresholdbinary">VXLIB_thresholdBinary<a class="headerlink" href="#vxlib-thresholdbinary" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>106</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>204</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>590</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2127</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>106</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>204</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>590</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2128</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>140</center></td><td><center>0.14</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>334</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1103</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4175</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>140</center></td><td><center>0.14</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>334</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1103</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4175</center></td><td><center>0.06</center></td></tr>
+</table><h2 id="vxlib-tablelookup">VXLIB_tableLookup<a class="headerlink" href="#vxlib-tablelookup" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>count</center></th><th><center>offset</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>0</center></td><td><center>1267</center></td><td><center>1.24</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>0</center></td><td><center>4283</center></td><td><center>1.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>0</center></td><td><center>16667</center></td><td><center>1.02</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>0</center></td><td><center>66203</center></td><td><center>1.01</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>10</center></td><td><center>66203</center></td><td><center>1.01</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>0</center></td><td><center>1206</center></td><td><center>1.18</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>0</center></td><td><center>4310</center></td><td><center>1.05</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>127</center></td><td><center>0</center></td><td><center>16790</center></td><td><center>1.02</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>127</center></td><td><center>0</center></td><td><center>66710</center></td><td><center>1.02</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>127</center></td><td><center>10</center></td><td><center>66710</center></td><td><center>1.02</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>0</center></td><td><center>1193</center></td><td><center>1.17</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>0</center></td><td><center>4313</center></td><td><center>1.05</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>12</center></td><td><center>16851</center></td><td><center>1.03</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>0</center></td><td><center>16793</center></td><td><center>1.02</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>512</center></td><td><center>30</center></td><td><center>66713</center></td><td><center>1.02</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>0</center></td><td><center>1211</center></td><td><center>1.18</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>0</center></td><td><center>4379</center></td><td><center>1.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>12</center></td><td><center>17101</center></td><td><center>1.04</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>0</center></td><td><center>17051</center></td><td><center>1.04</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>512</center></td><td><center>30</center></td><td><center>67739</center></td><td><center>1.03</center></td></tr>
+</table><h2 id="vxlib-subtract">VXLIB_subtract<a class="headerlink" href="#vxlib-subtract" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeIn1</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>overFlowPolicy</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>340</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>586</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Saturate</center></td><td><center>2124</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>443</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1213</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Saturate</center></td><td><center>4401</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>444</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1411</center></td><td><center>0.09</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Saturate</center></td><td><center>4310</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Saturate</center></td><td><center>466</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Saturate</center></td><td><center>1245</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Saturate</center></td><td><center>4183</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>212</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>725</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Wrap</center></td><td><center>2137</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>326</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1095</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Wrap</center></td><td><center>4166</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>331</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1100</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Wrap</center></td><td><center>4175</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>Wrap</center></td><td><center>334</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Wrap</center></td><td><center>1103</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Wrap</center></td><td><center>4179</center></td><td><center>0.06</center></td></tr>
+</table><h2 id="vxlib-or">VXLIB_or<a class="headerlink" href="#vxlib-or" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>110</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>333</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>592</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2255</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>110</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>208</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>592</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2132</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>246</center></td><td><center>0.24</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>338</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1107</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4305</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>528</center></td><td><center>0.52</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>338</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1107</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4182</center></td><td><center>0.06</center></td></tr>
+</table><h2 id="vxlib-not">VXLIB_not<a class="headerlink" href="#vxlib-not" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>106</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>202</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>588</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2124</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>106</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>202</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>588</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2125</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>243</center></td><td><center>0.24</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>330</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1098</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4172</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>245</center></td><td><center>0.24</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>440</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1204</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4295</center></td><td><center>0.07</center></td></tr>
+</table><h2 id="vxlib-norml1">VXLIB_normL1<a class="headerlink" href="#vxlib-norml1" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>114</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>210</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>597</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2134</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>146</center></td><td><center>0.14</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>341</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1110</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4182</center></td><td><center>0.06</center></td></tr>
+</table><h2 id="vxlib-norml2">VXLIB_normL2<a class="headerlink" href="#vxlib-norml2" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>870</center></td><td><center>0.85</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>3046</center></td><td><center>0.74</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>10487</center></td><td><center>0.64</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>41206</center></td><td><center>0.63</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>940</center></td><td><center>0.92</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>3073</center></td><td><center>0.75</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>11519</center></td><td><center>0.7</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>45547</center></td><td><center>0.69</center></td></tr>
+</table><h2 id="vxlib-minmaxloc">VXLIB_minMaxLoc<a class="headerlink" href="#vxlib-minmaxloc" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dType</center></th><th><center>width</center></th><th><center>height</center></th><th><center>Mode</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/NumPt</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value</center></td><td><center>456</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value</center></td><td><center>1239</center></td><td><center>0.02</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value</center></td><td><center>460</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value</center></td><td><center>1240</center></td><td><center>0.02</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value</center></td><td><center>702</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value</center></td><td><center>2198</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value</center></td><td><center>705</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value</center></td><td><center>2201</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count</center></td><td><center>1605</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count</center></td><td><center>5465</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count</center></td><td><center>1606</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count</center></td><td><center>5469</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count</center></td><td><center>2839</center></td><td><center>0.17</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count</center></td><td><center>10523</center></td><td><center>0.16</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count</center></td><td><center>2841</center></td><td><center>0.17</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count</center></td><td><center>10523</center></td><td><center>0.16</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>29334</center></td><td><center>1.79</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>101698</center></td><td><center>1.55</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>29350</center></td><td><center>1.79</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>101720</center></td><td><center>1.55</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>30812</center></td><td><center>1.88</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>107301</center></td><td><center>1.64</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>30819</center></td><td><center>1.88</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>Min/Max Value-Count-Loc</center></td><td><center>107390</center></td><td><center>1.64</center></td></tr>
+</table><h2 id="vxlib-thresholdrange">VXLIB_thresholdRange<a class="headerlink" href="#vxlib-thresholdrange" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>115</center></td><td><center>0.11</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>202</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>586</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2129</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>101</center></td><td><center>0.1</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>206</center></td><td><center>0.05</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>586</center></td><td><center>0.04</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>2129</center></td><td><center>0.03</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>133</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>325</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1093</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4167</center></td><td><center>0.06</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>133</center></td><td><center>0.13</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>325</center></td><td><center>0.08</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>1093</center></td><td><center>0.07</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4167</center></td><td><center>0.06</center></td></tr>
+</table><h2 id="vxlib-median">VXLIB_median<a class="headerlink" href="#vxlib-median" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>widthIn</center></th><th><center>heightIn</center></th><th><center>M</center></th><th><center>N</center></th><th><center>widthOut</center></th><th><center>heightOut</center></th><th><center>kernelType</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/NumPt</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>3</center></td><td><center>126</center></td><td><center>126</center></td><td><center>0</center></td><td><center>4112</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>3</center></td><td><center>3</center></td><td><center>254</center></td><td><center>254</center></td><td><center>0</center></td><td><center>16336</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>3</center></td><td><center>126</center></td><td><center>126</center></td><td><center>0</center></td><td><center>4105</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>3</center></td><td><center>3</center></td><td><center>254</center></td><td><center>254</center></td><td><center>0</center></td><td><center>16329</center></td><td><center>0.25</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>3</center></td><td><center>126</center></td><td><center>126</center></td><td><center>0</center></td><td><center>8146</center></td><td><center>0.5</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>3</center></td><td><center>3</center></td><td><center>254</center></td><td><center>254</center></td><td><center>0</center></td><td><center>32593</center></td><td><center>0.5</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>3</center></td><td><center>126</center></td><td><center>126</center></td><td><center>0</center></td><td><center>8146</center></td><td><center>0.5</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>3</center></td><td><center>3</center></td><td><center>254</center></td><td><center>254</center></td><td><center>0</center></td><td><center>32592</center></td><td><center>0.5</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>4</center></td><td><center>4</center></td><td><center>125</center></td><td><center>125</center></td><td><center>1</center></td><td><center>117272</center></td><td><center>0.47</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4</center></td><td><center>4</center></td><td><center>253</center></td><td><center>253</center></td><td><center>1</center></td><td><center>368256</center></td><td><center>0.36</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>5</center></td><td><center>5</center></td><td><center>124</center></td><td><center>124</center></td><td><center>1</center></td><td><center>224498</center></td><td><center>0.58</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>5</center></td><td><center>5</center></td><td><center>252</center></td><td><center>252</center></td><td><center>1</center></td><td><center>750013</center></td><td><center>0.47</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>6</center></td><td><center>6</center></td><td><center>123</center></td><td><center>123</center></td><td><center>1</center></td><td><center>380063</center></td><td><center>0.7</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>6</center></td><td><center>6</center></td><td><center>251</center></td><td><center>251</center></td><td><center>1</center></td><td><center>1335770</center></td><td><center>0.59</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>7</center></td><td><center>7</center></td><td><center>122</center></td><td><center>122</center></td><td><center>1</center></td><td><center>635407</center></td><td><center>0.87</center></td></tr>
+<tr><td><center>int8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>7</center></td><td><center>7</center></td><td><center>250</center></td><td><center>250</center></td><td><center>1</center></td><td><center>2311827</center></td><td><center>0.75</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>4</center></td><td><center>4</center></td><td><center>125</center></td><td><center>125</center></td><td><center>1</center></td><td><center>181097</center></td><td><center>0.72</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>4</center></td><td><center>4</center></td><td><center>253</center></td><td><center>253</center></td><td><center>1</center></td><td><center>645053</center></td><td><center>0.63</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>5</center></td><td><center>5</center></td><td><center>124</center></td><td><center>124</center></td><td><center>1</center></td><td><center>368267</center></td><td><center>0.96</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>5</center></td><td><center>5</center></td><td><center>252</center></td><td><center>252</center></td><td><center>1</center></td><td><center>1368253</center></td><td><center>0.86</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>6</center></td><td><center>6</center></td><td><center>123</center></td><td><center>123</center></td><td><center>1</center></td><td><center>653905</center></td><td><center>1.2</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>6</center></td><td><center>6</center></td><td><center>251</center></td><td><center>251</center></td><td><center>1</center></td><td><center>2494687</center></td><td><center>1.1</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>7</center></td><td><center>7</center></td><td><center>122</center></td><td><center>122</center></td><td><center>1</center></td><td><center>1127568</center></td><td><center>1.55</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>7</center></td><td><center>7</center></td><td><center>250</center></td><td><center>250</center></td><td><center>1</center></td><td><center>4386510</center></td><td><center>1.43</center></td></tr>
+</table><h2 id="vxlib-convolve">VXLIB_convolve<a class="headerlink" href="#vxlib-convolve" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center> dTypeIn</center></th><th><center> dTypeFilter</center></th><th><center> dTypeOut</center></th><th><center> width</center></th><th><center> height</center></th><th><center> strideIn</center></th><th><center> strideOut</center></th><th><center> filterWidth</center></th><th><center> filterHeight</center></th><th><center>scale</center></th><th><center> padLeft</center></th><th><center> padRight</center></th><th><center> padTop</center></th><th><center> padBottom</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>3</center></td><td><center>3</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>377</center></td><td><center>0.37</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>3</center></td><td><center>3</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>953</center></td><td><center>0.23</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>3</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>3314</center></td><td><center>0.2</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>3</center></td><td><center>3</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>375</center></td><td><center>0.37</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>3</center></td><td><center>3</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>952</center></td><td><center>0.23</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>3</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>3314</center></td><td><center>0.2</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>5</center></td><td><center>5</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>714</center></td><td><center>0.7</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>5</center></td><td><center>5</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>2622</center></td><td><center>0.64</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>5</center></td><td><center>5</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>10254</center></td><td><center>0.63</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>5</center></td><td><center>5</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>855</center></td><td><center>0.83</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>5</center></td><td><center>5</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>2637</center></td><td><center>0.64</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>5</center></td><td><center>5</center></td><td><center>4</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>10269</center></td><td><center>0.63</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>7</center></td><td><center>7</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>925</center></td><td><center>0.9</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>7</center></td><td><center>7</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>3509</center></td><td><center>0.86</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>7</center></td><td><center>7</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>14053</center></td><td><center>0.86</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>7</center></td><td><center>7</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>916</center></td><td><center>0.89</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>7</center></td><td><center>7</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>3500</center></td><td><center>0.85</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>7</center></td><td><center>7</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>14044</center></td><td><center>0.86</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>9</center></td><td><center>9</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>1999</center></td><td><center>1.95</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>9</center></td><td><center>9</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>8481</center></td><td><center>2.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>9</center></td><td><center>9</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>35233</center></td><td><center>2.15</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>9</center></td><td><center>9</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>1999</center></td><td><center>1.95</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>9</center></td><td><center>9</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>8473</center></td><td><center>2.07</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>9</center></td><td><center>9</center></td><td><center>5</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>35225</center></td><td><center>2.15</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>8</center></td><td><center>13</center></td><td><center>6</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>4982</center></td><td><center>4.87</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>27</center></td><td><center>33</center></td><td><center>9</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>117413</center></td><td><center>28.67</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>89</center></td><td><center>67</center></td><td><center>12</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>2970319</center></td><td><center>181.29</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>8</center></td><td><center>13</center></td><td><center>6</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>4901</center></td><td><center>4.79</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>27</center></td><td><center>33</center></td><td><center>9</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>117142</center></td><td><center>28.6</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>89</center></td><td><center>67</center></td><td><center>12</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>2969311</center></td><td><center>181.23</center></td></tr>
+</table><h2 id="vxlib-dilate">VXLIB_dilate<a class="headerlink" href="#vxlib-dilate" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center> dTypeIn</center></th><th><center> dTypeOut</center></th><th><center> width</center></th><th><center> height</center></th><th><center>strideIn</center></th><th><center>strideOut</center></th><th><center> filterWidth</center></th><th><center> filterHeight</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>29</center></td><td><center>12</center></td><td><center>4225</center></td><td><center>4.13</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>23</center></td><td><center>54</center></td><td><center>15206</center></td><td><center>3.71</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>13</center></td><td><center>92</center></td><td><center>92304</center></td><td><center>5.63</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>29</center></td><td><center>12</center></td><td><center>8131</center></td><td><center>7.94</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>23</center></td><td><center>54</center></td><td><center>30337</center></td><td><center>7.41</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>uint16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>13</center></td><td><center>92</center></td><td><center>184553</center></td><td><center>11.26</center></td></tr>
+</table><h2 id="vxlib-meanstddev">VXLIB_meanStdDev<a class="headerlink" href="#vxlib-meanstddev" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center> dTypeIn</center></th><th><center> dTypeOut</center></th><th><center> width</center></th><th><center> height</center></th><th><center>strideIn</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>float</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>476</center></td><td><center>0.46</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>float</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>852</center></td><td><center>0.21</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>float</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>2388</center></td><td><center>0.15</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>float</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>918</center></td><td><center>0.9</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>float</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>1410</center></td><td><center>0.34</center></td></tr>
+<tr><td><center>uint16_t</center></td><td><center>float</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>4501</center></td><td><center>0.27</center></td></tr>
+</table><h2 id="vxlib-gaussian">VXLIB_gaussian<a class="headerlink" href="#vxlib-gaussian" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>filterDim</center></th><th><center>strideIn</center></th><th><center>strideOut</center></th><th><center>shift</center></th><th><center>padLeft</center></th><th><center>padRight</center></th><th><center>padTop</center></th><th><center>padBottom</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>3</center></td><td><center>64</center></td><td><center>64</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>847</center></td><td><center>0.21</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>3</center></td><td><center>128</center></td><td><center>128</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>2701</center></td><td><center>0.16</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>3</center></td><td><center>256</center></td><td><center>256</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>10046</center></td><td><center>0.15</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>5</center></td><td><center>64</center></td><td><center>64</center></td><td><center>8</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>2597</center></td><td><center>0.63</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>5</center></td><td><center>128</center></td><td><center>128</center></td><td><center>8</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>10229</center></td><td><center>0.62</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>5</center></td><td><center>256</center></td><td><center>256</center></td><td><center>8</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>40853</center></td><td><center>0.62</center></td></tr>
+</table><h2 id="vxlib-halfscalegaussian">VXLIB_halfScaleGaussian<a class="headerlink" href="#vxlib-halfscalegaussian" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dTypeOut</center></th><th><center>widthIn</center></th><th><center>heightIn</center></th><th><center>widthOut</center></th><th><center>heightOut</center></th><th><center>filterDim</center></th><th><center>strideIn</center></th><th><center>strideOut</center></th><th><center>padLeft</center></th><th><center>padRight</center></th><th><center>padTop</center></th><th><center>padBottom</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>30</center></td><td><center>30</center></td><td><center>5</center></td><td><center>64</center></td><td><center>30</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>1428</center></td><td><center>0.35</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>62</center></td><td><center>62</center></td><td><center>5</center></td><td><center>128</center></td><td><center>62</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>5356</center></td><td><center>0.33</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint8_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>126</center></td><td><center>126</center></td><td><center>5</center></td><td><center>256</center></td><td><center>126</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>0</center></td><td><center>20892</center></td><td><center>0.32</center></td></tr>
+</table><h2 id="vxlib-magnitude">VXLIB_magnitude<a class="headerlink" href="#vxlib-magnitude" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn0</center></th><th><center>dTypeIn1</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn0</center></th><th><center>strideIn1</center></th><th><center>strideOut</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>32</center></td><td><center>595</center></td><td><center>0.58</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>1893</center></td><td><center>0.46</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>7406</center></td><td><center>0.45</center></td></tr>
+<tr><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>int16_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>28780</center></td><td><center>0.44</center></td></tr>
+</table><h2 id="vxlib-histogram">VXLIB_histogram<a class="headerlink" href="#vxlib-histogram" title="Link to this heading">¶</a></h2>
+<TABLE frame=box rules=all cellspacing=0 width=100% border=1
+            cellpadding=1>
+<tr bgcolor="lightgrey"><th><center>dTypeIn</center></th><th><center>dTypeOut</center></th><th><center>width</center></th><th><center>height</center></th><th><center>strideIn</center></th><th><center>offset</center></th><th><center>range</center></th><th><center>numBins</center></th><th><center>EVM Cycles</center></th><th><center>Cycles/Pixel</center></th></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint32_t</center></td><td><center>64</center></td><td><center>64</center></td><td><center>64</center></td><td><center>0</center></td><td><center>256</center></td><td><center>100</center></td><td><center>150932</center></td><td><center>36.85</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint32_t</center></td><td><center>128</center></td><td><center>128</center></td><td><center>128</center></td><td><center>0</center></td><td><center>256</center></td><td><center>100</center></td><td><center>602490</center></td><td><center>36.77</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint32_t</center></td><td><center>256</center></td><td><center>256</center></td><td><center>256</center></td><td><center>0</center></td><td><center>256</center></td><td><center>100</center></td><td><center>2409389</center></td><td><center>36.76</center></td></tr>
+<tr><td><center>uint8_t</center></td><td><center>uint32_t</center></td><td><center>512</center></td><td><center>512</center></td><td><center>512</center></td><td><center>0</center></td><td><center>256</center></td><td><center>100</center></td><td><center>9666895</center></td><td><center>36.88</center></td></tr>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    Aug 07, 2026
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2026, Texas Instruments Incorporated.
+        
+    </div>
+  
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.highlight", "toc.follow"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+        <script src="../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    
+  </body>
+</html>
