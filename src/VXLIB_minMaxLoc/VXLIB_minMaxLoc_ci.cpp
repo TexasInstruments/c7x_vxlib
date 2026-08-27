@@ -515,8 +515,8 @@ VXLIB_STATUS VXLIB_minMaxLoc_exec_ci(VXLIB_kernelHandle handle,
 
       /* If the optional parameters for min or max locations are available AND
        * if one of the min/max values or counts have changed during this block iteration ...*/
-      if (((pMinLocLocal != NULL) && ((origMinVal != *pMinValLocal) || (origMinCount != *pMinCountLocal))) ||
-          ((pMaxLocLocal != NULL) && ((origMaxVal != *pMaxValLocal) || (origMaxCount != *pMaxCountLocal)))) {
+      if (((pMinLocLocal != NULL) && ((origMinVal != *pMinValLocal) || (pMinCountLocal != NULL) && (origMinCount != *pMinCountLocal))) ||
+          ((pMaxLocLocal != NULL) && ((origMaxVal != *pMaxValLocal) || (pMaxCountLocal != NULL) && (origMaxCount != *pMaxCountLocal)))) {
 
          __SE_TEMPLATE_v1 se0NewLocParams = *(__SE_TEMPLATE_v1 *) ((uint8_t *) pBlock + SE0_LOC_PARAM_OFFSET);
          __SA_TEMPLATE_v1 sa0NewLocParams = *(__SA_TEMPLATE_v1 *) ((uint8_t *) pBlock + SA0_LOC_PARAM_OFFSET);
