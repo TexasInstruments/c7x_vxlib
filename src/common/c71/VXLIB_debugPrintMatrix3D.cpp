@@ -24,7 +24,7 @@ template <typename dataType> void VXLIB_debugPrintMatrix3D_helper(dataType *matr
          xPtr = yPtr;
          VXLIB_PRINTF("%p |", xPtr);
          for (x = 0; x < params->dim_x; x++) {
-            VXLIB_PRINTF("%3d ", *(xPtr));
+            VXLIB_PRINTF("%3d ", static_cast<int>(*xPtr));
             xPtr++;
          }
          VXLIB_PRINTF("%s", "|\n");
@@ -58,7 +58,7 @@ template <typename dataType> void VXLIB_debugPrintMatrix3D_helperU(dataType *mat
          xPtr = yPtr;
          VXLIB_PRINTF("%p |", xPtr);
          for (x = 0; x < params->dim_x; x++) {
-            VXLIB_PRINTF("%3u ", *(xPtr));
+            VXLIB_PRINTF("%3u ", static_cast<unsigned int>(*xPtr));
             xPtr++;
          }
          VXLIB_PRINTF("%s", "|\n");
@@ -70,8 +70,8 @@ template <typename dataType> void VXLIB_debugPrintMatrix3D_helperU(dataType *mat
    return;
 }
 
-template void VXLIB_debugPrintMatrix3D_helper<uint8_t>(uint8_t *matrix, const VXLIB_bufParams3D_t *params);
-template void VXLIB_debugPrintMatrix3D_helper<uint16_t>(uint16_t *matrix, const VXLIB_bufParams3D_t *params);
+template void VXLIB_debugPrintMatrix3D_helperU<uint8_t>(uint8_t *matrix, const VXLIB_bufParams3D_t *params);
+template void VXLIB_debugPrintMatrix3D_helperU<uint16_t>(uint16_t *matrix, const VXLIB_bufParams3D_t *params);
 
 /******************************************************************************/
 
