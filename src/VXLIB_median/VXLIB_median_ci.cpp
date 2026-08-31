@@ -318,16 +318,20 @@ void VXLIB_median_perfEst(VXLIB_kernelHandle           handle,
       typedef typename c7x::make_full_vector<uint8_t>::type vec;
       eleCount = c7x::element_count_of<vec>::value;
    }
-   if (bufParamsIn->data_type == VXLIB_INT8) {
+   else if (bufParamsIn->data_type == VXLIB_INT8) {
       typedef typename c7x::make_full_vector<int8_t>::type vec;
       eleCount = c7x::element_count_of<vec>::value;
    }
-   if (bufParamsIn->data_type == VXLIB_UINT16) {
+   else if (bufParamsIn->data_type == VXLIB_UINT16) {
       typedef typename c7x::make_full_vector<uint16_t>::type vec;
       eleCount = c7x::element_count_of<vec>::value;
    }
-   if (bufParamsIn->data_type == VXLIB_INT16) {
+   else if (bufParamsIn->data_type == VXLIB_INT16) {
       typedef typename c7x::make_full_vector<int16_t>::type vec;
+      eleCount = c7x::element_count_of<vec>::value;
+   }
+   else {
+      typedef typename c7x::make_full_vector<int32_t>::type vec;
       eleCount = c7x::element_count_of<vec>::value;
    }
 

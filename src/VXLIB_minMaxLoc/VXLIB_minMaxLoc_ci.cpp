@@ -515,8 +515,8 @@ VXLIB_STATUS VXLIB_minMaxLoc_exec_ci(VXLIB_kernelHandle handle,
 
       /* If the optional parameters for min or max locations are available AND
        * if one of the min/max values or counts have changed during this block iteration ...*/
-      if (((pMinLocLocal != NULL) && ((origMinVal != *pMinValLocal) || (origMinCount != *pMinCountLocal))) ||
-          ((pMaxLocLocal != NULL) && ((origMaxVal != *pMaxValLocal) || (origMaxCount != *pMaxCountLocal)))) {
+      if (((pMinLocLocal != NULL) && ((origMinVal != *pMinValLocal) || (pMinCountLocal != NULL) && (origMinCount != *pMinCountLocal))) ||
+          ((pMaxLocLocal != NULL) && ((origMaxVal != *pMaxValLocal) || (pMaxCountLocal != NULL) && (origMaxCount != *pMaxCountLocal)))) {
 
          __SE_TEMPLATE_v1 se0NewLocParams = *(__SE_TEMPLATE_v1 *) ((uint8_t *) pBlock + SE0_LOC_PARAM_OFFSET);
          __SA_TEMPLATE_v1 sa0NewLocParams = *(__SA_TEMPLATE_v1 *) ((uint8_t *) pBlock + SA0_LOC_PARAM_OFFSET);
@@ -701,20 +701,25 @@ void VXLIB_minMaxLoc_perfEst(VXLIB_kernelHandle              handle,
       eleCount = c7x::element_count_of<vec>::value;
    }
 
-   if (bufParamsIn->data_type == VXLIB_INT8) {
+   else if (bufParamsIn->data_type == VXLIB_INT8) {
       typedef typename c7x::make_full_vector<int8_t>::type vec;
       eleCount = c7x::element_count_of<vec>::value;
    }
 
-   if (bufParamsIn->data_type == VXLIB_UINT16) {
+   else if (bufParamsIn->data_type == VXLIB_UINT16) {
       typedef typename c7x::make_full_vector<uint16_t>::type vec;
       eleCount = c7x::element_count_of<vec>::value;
    }
 
-   if (bufParamsIn->data_type == VXLIB_INT16) {
+   else if (bufParamsIn->data_type == VXLIB_INT16) {
       typedef typename c7x::make_full_vector<int16_t>::type vec;
       eleCount = c7x::element_count_of<vec>::value;
    }
+   
+   else {
+      typedef typename c7x::make_full_vector<int32_t>::type vec;
+      eleCount = c7x::element_count_of<vec>::value;
+   } 
 
    size_t overheadCnt = 84; // profiled code before entering compute loop
 

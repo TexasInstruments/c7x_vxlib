@@ -15,7 +15,7 @@ template <typename dataType> void VXLIB_debugPrintMatrix_helper(dataType *matrix
 
    VXLIB_PRINTF("%p |", xPtr);
    for (x = 0; x < params->dim_x; x++) {
-      VXLIB_PRINTF("%3d ", *(xPtr));
+      VXLIB_PRINTF("%3d ", static_cast<int>(*xPtr));
       xPtr++;
    }
    VXLIB_PRINTF("%s", "|\n");
@@ -24,10 +24,26 @@ template <typename dataType> void VXLIB_debugPrintMatrix_helper(dataType *matrix
 }
 
 template void VXLIB_debugPrintMatrix_helper<int8_t>(int8_t *matrix, const VXLIB_bufParams1D_t *params);
-template void VXLIB_debugPrintMatrix_helper<uint8_t>(uint8_t *matrix, const VXLIB_bufParams1D_t *params);
 template void VXLIB_debugPrintMatrix_helper<int16_t>(int16_t *matrix, const VXLIB_bufParams1D_t *params);
-template void VXLIB_debugPrintMatrix_helper<uint16_t>(uint16_t *matrix, const VXLIB_bufParams1D_t *params);
 template void VXLIB_debugPrintMatrix_helper<int32_t>(int32_t *matrix, const VXLIB_bufParams1D_t *params);
+
+template <typename dataType> void VXLIB_debugPrintMatrix_helperU(dataType *matrix, const VXLIB_bufParams1D_t *params)
+{
+   uint32_t  x;
+   dataType *xPtr = matrix;
+
+   VXLIB_PRINTF("%p |", xPtr);
+   for (x = 0; x < params->dim_x; x++) {
+      VXLIB_PRINTF("%3u ", static_cast<unsigned int>(*xPtr));
+      xPtr++;
+   }
+   VXLIB_PRINTF("%s", "|\n");
+
+   return;
+}
+
+template void VXLIB_debugPrintMatrix_helperU<uint8_t>(uint8_t *matrix, const VXLIB_bufParams1D_t *params);
+template void VXLIB_debugPrintMatrix_helperU<uint16_t>(uint16_t *matrix, const VXLIB_bufParams1D_t *params);
 
 /******************************************************************************/
 
@@ -46,13 +62,13 @@ void VXLIB_debugPrintMatrix1D(void *matrix, const VXLIB_bufParams1D_t *params)
       VXLIB_debugPrintMatrix_helper<int16_t>((int16_t *) matrix, params);
       break;
    case VXLIB_UINT16:
-      VXLIB_debugPrintMatrix_helper<uint16_t>((uint16_t *) matrix, params);
+      VXLIB_debugPrintMatrix_helperU<uint16_t>((uint16_t *) matrix, params);
       break;
    case VXLIB_INT8:
       VXLIB_debugPrintMatrix_helper<int8_t>((int8_t *) matrix, params);
       break;
    case VXLIB_UINT8:
-      VXLIB_debugPrintMatrix_helper<uint8_t>((uint8_t *) matrix, params);
+      VXLIB_debugPrintMatrix_helperU<uint8_t>((uint8_t *) matrix, params);
       break;
    default:
       VXLIB_PRINTF("\nERROR: Unrecognized data type in %s.\n", __FUNCTION__);
