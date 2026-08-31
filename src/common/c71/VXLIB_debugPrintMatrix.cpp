@@ -48,7 +48,7 @@ template <typename dataType> void VXLIB_debugPrintMatrix_helperU(dataType *matri
       xPtr = yPtr;
       VXLIB_PRINTF("%p |", xPtr);
       for (x = 0; x < params->dim_x; x++) {
-         VXLIB_PRINTF("%3d ", static_cast<unsigned int>(*xPtr));
+         VXLIB_PRINTF("%3u ", static_cast<unsigned int>(*xPtr));
          xPtr++;
       }
       VXLIB_PRINTF("%s", "|\n");
