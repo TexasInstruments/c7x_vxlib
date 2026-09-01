@@ -148,12 +148,13 @@ VXLIB_STATUS VXLIB_meanStdDev_exec_checkParams(VXLIB_kernelHandle handle,
  *  @details     Please refer to details under
  *               @ref VXLIB_meanStdDev_exec
  *
- *  @param [in]  handle     :  Active handle to the kernel
- *  @param [in]  pIn        :  Pointer to the structure input image
- *  @param [in, out]  pPixelsProcessed  :  Pointer to the structure number of pixels processed
- *  @param [in,out]  pCurrentSum  :   Pointer to the structure current pixel sum
- *  @param [in,out]  pCurrentSqSum : Pointer to the structure current pixel squared sum
- *  @param [out] pOut   :  Pointer to the output image
+ *  @param [in]  handle           :  Active handle to the kernel
+ *  @param [in]  pIn              :  Pointer to the structure input image
+ *  @param [out] pOut0            :  Pointer to the first output buffer (mean)
+ *  @param [out] pOut1            :  Pointer to the second output buffer (std dev)
+ *  @param [in,out] pPixelsProcessed :  Pointer to the number of pixels processed
+ *  @param [in,out] pCurrentSum      :  Pointer to the current pixel sum
+ *  @param [in,out] pCurrentSqSum    :  Pointer to the current pixel squared sum
  *
  *  @return      Status value indicating success or failure. Refer to @ref VXLIB_STATUS.
  *

@@ -169,6 +169,12 @@ VXLIB_STATUS VXLIB_accumulateSquareImage_exec_checkParams(VXLIB_kernelHandle han
 VXLIB_STATUS
 VXLIB_accumulateSquareImage_exec(VXLIB_kernelHandle handle, void *restrict pIn, void *restrict pOut, uint32_t shift);
 
+/**
+ *  @brief   Returns cycle estimates for VXLIB_accumulateSquareImage_perfEst.
+ *  @param [in]  handle     :  Active handle to the kernel
+ *  @param [out] archCycles :  Arch compute cycles obtained from asm.
+ *  @param [out] estCycles  :  Estimated cycles including overhead.
+ */
 void VXLIB_accumulateSquareImage_perfEst(VXLIB_kernelHandle handle, size_t *archCycles, size_t *estCycles);
 
 /** @} */

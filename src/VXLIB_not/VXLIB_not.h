@@ -176,7 +176,6 @@ VXLIB_not_exec(VXLIB_kernelHandle handle, void *restrict pIn, void *restrict pOu
  *  @param [out] archCycles :  Arch compute cycles obtained from asm.
  *  @param [out] estCycles  :  Estimated cycles including overhead.
  *
- *  @return      None.
  *
  *  @par Assumptions:
  *    - None

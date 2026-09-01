@@ -196,7 +196,6 @@ VXLIB_STATUS VXLIB_thresholdRange_exec(VXLIB_kernelHandle handle,
  *  @param [out] archCycles :  Arch compute cycles obtained from asm.
  *  @param [out] estCycles  :  Estimated cycles including overhead.
  *
- *  @return      None.
  *
  *  @par Assumptions:
  *    - None

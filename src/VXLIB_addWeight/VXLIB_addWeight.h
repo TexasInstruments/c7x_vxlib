@@ -183,6 +183,12 @@ VXLIB_addWeight_exec(VXLIB_kernelHandle handle,
                      float alpha);
 
 // function that computes the performance estimation of kernel
+/**
+ *  @brief   Returns cycle estimates for VXLIB_addWeight_perfEst.
+ *  @param [in]  handle     :  Active handle to the kernel
+ *  @param [out] archCycles :  Arch compute cycles obtained from asm.
+ *  @param [out] estCycles  :  Estimated cycles including overhead.
+ */
 void VXLIB_addWeight_perfEst(VXLIB_kernelHandle handle, size_t *archCycles, size_t *estCycles);
 
 /** @} */

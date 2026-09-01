@@ -35,3 +35,7 @@ docs/superpowers/
 
 # Generated docs
 docs/doxygen/html/
+docs/sphinx/api/
+docs/sphinx/perf/
+docs/sphinx/_build/
+.docs-venv/

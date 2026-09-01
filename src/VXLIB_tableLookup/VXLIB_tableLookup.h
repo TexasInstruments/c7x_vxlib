@@ -213,7 +213,6 @@ VXLIB_tableLookup_exec(VXLIB_kernelHandle handle, void *restrict pIn, void *rest
  *
  *  @param [out] estCycles    :  Estimated cycles including overhead.
  *
- *  @return      None.
  *
  *  @par Assumptions:
  *    - The function @ref VXLIB_tableLookup_init is called prior to this function call

@@ -221,7 +221,7 @@ extern "C" {
  * \details
  */
 
-/* @{ */
+/** @{ */
 
 typedef double VXLIB_D64; //!< Double precision floating point
 typedef float  VXLIB_F32; //!< Single precision floating point
@@ -295,7 +295,7 @@ typedef enum {
 /**
  * @cond
  */
-/* @{ */
+/** @{ */
 
 /* ---------------------------------------------------------------- */
 /*  MISRAC Rule 4.9(DEFINE.FUNC) Deviation: The advisory is not     */
@@ -377,8 +377,9 @@ typedef enum {
 #define VXLIB_ceilingDiv(x, y)                                                                                         \
    (((x) + (y) -1) / (y)) /**< A macro to return the ceiling of the division of two integers. */
 
-/* @} */
+/** @} */
 /** @endcond  */
+/** @} */
 
 #ifdef __cplusplus
 }
